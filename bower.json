@@ -1,0 +1,20 @@
+{
+  "name": "express-node-postgresql-api",
+  "version": "0.0.0",
+  "authors": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client",
+    "server"
+  ],
+  "dependencies": {
+    "accounting": "~0.3.2",
+    "bootstrap": "~3.3.5",
+    "nouislider": "~8.0.2",
+    "react": "~0.13.3",
+    "underscore": "~1.8.3"
+  }
+}
