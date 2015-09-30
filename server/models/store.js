@@ -40,6 +40,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
+      tableName: 'store',
       associate: function(models) {
         Store.hasMany(models.Inventory);
       }

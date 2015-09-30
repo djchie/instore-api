@@ -24,6 +24,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING
     }
   }, {
+    tableName: 'product'
     classMethods: {
       associate: function(models) {
         Product.hasMany(models.Inventory)

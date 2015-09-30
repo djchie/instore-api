@@ -18,6 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.FLOAT
     }
   }, {
+    tableName: 'inventory',
     classMethods: {
       associate: function(models) {
         // Inventory.belongsTo(models.Product);
