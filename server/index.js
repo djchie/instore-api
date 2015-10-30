@@ -8,7 +8,7 @@ var db = require(__dirname + '/models/index');
 
 // Sync the database models
 db.sequelize.sync({
-  // force: true
+  force: false
 });
 
 // Create an express app

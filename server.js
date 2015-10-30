@@ -1,7 +1,7 @@
-var server = require('./api/api.js');
+var server = require('./server/index.js');
 
 // Set our port
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 
 // START THE SERVER
 // =============================================================================
