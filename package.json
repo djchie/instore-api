@@ -19,7 +19,8 @@
   "author": "Derrick Chie",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.0.0-alpha.5"
+    "koa": "^2.0.0-alpha.5",
+    "koa-router": "^7.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
