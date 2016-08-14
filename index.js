@@ -1,0 +1,7 @@
+require('babel-core/register')({
+  plugins: ['transform-async-to-generator']
+});
+
+require("babel-polyfill");
+
+const server = require('./server');
