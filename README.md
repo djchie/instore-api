@@ -1,3 +1,3 @@
-1. Set up router
+
 2. Set up search
 3. Set up Semantics API and return searches....

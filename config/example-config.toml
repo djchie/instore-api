@@ -1,0 +1,17 @@
+# This is the config file for the InStore API Server
+
+title = 'Development InStore API Server Config'
+
+[owner]
+name = 'Derrick Chie'
+
+[api]
+version = '1.0'
+
+[server]
+port = 5000
+
+[database]
+server = ''
+ports = 8080
+
