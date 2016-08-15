@@ -1,19 +1,17 @@
-const Koa = require('koa');
-const Router = require('koa-router');
+import Koa from 'koa';
+import Router from 'koa-router';
 
-const logger = require('koa-logger');
-const responseTime = require('koa-response-time');
+import logger from 'koa-logger';
+import responseTime from 'koa-response-time';
 
-const config = require('../config').default;
+import config from '../config';
+
+import router from './routes';
+
 const port = process.env.PORT || config.server.port;
 
 const server = new Koa();
-const router = new Router({
-  prefix: '/api/' + config.api.version,
-});
 
-const setRoutes = require('./routes').default;
-console.log(setRoutes);
 // Logs requests made and reponses sent
 server.use(logger());
 
@@ -25,8 +23,7 @@ router.get('/', async (ctx, next) => {
   ctx.body = 'Hello World';
 });
 
-setRoutes(router);
-
+// Connects all of the api endpoint routes
 server.use(router.routes());
 
 server.listen(port, () => console.log('Running at http://localhost:' + port));
