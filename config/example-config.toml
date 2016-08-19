@@ -1,6 +1,6 @@
-# This is the config file for the InStore API Server
+# This is the config file for the instore API Server
 
-title = 'Development InStore API Server Config'
+title = 'Development instore API Server Config'
 
 [owner]
 name = 'Derrick Chie'
