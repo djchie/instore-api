@@ -1,4 +1,8 @@
 1. Setup docker
+    koa
+    postgresql
+    docker-compose
+    organize docker files
 2. Create mock shoe product data from Semantics3
     - Put this into a postgresql db
 3. Create mock data for shoe stores
