@@ -1,7 +1,8 @@
 1. Setup docker
-2. Set up airbnb linter
-3. Create mock shoe product data from Semantics3
-4. Create mock data for shoe stores
+2. Create mock shoe product data from Semantics3
+    - Put this into a postgresql db
+3. Create mock data for shoe stores
+    - Put this into a postgresql db
 
 
 2. Set up search with query params
