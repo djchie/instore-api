@@ -7,7 +7,7 @@ import productRouter from './product-routes';
 import storeRouter from './store-routes';
 
 const router = new Router({
-  prefix: '/api/' + config.api.version,
+  prefix: `/api/${config.api.version}`,
 });
 
 router.use(searchRouter.routes());
