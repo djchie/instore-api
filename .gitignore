@@ -11,3 +11,6 @@ npm-debug.log
 
 # Mac files
 .DS_Store
+
+#Config
+config/config.toml
