@@ -16,3 +16,5 @@
 use posgres
 
 Figure out how server and client should interact... when the client side should be built... etc
+
+other action tiles, make sure the title is clicable as well
