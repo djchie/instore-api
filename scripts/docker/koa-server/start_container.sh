@@ -1,9 +1,15 @@
 #/bin/bash
 
+# This file is used to run this individual container
+# Better to run docker-compose up
+
 cd ${0%/*}
 
-LOCAL_PORT="5000"
+# This is the port we'll be using to access
+LOCAL_PORT="8080"
 
-docker run -p $LOCAL_PORT:8080 -d instore/koa-server
+# The port part redirects a local public port to a private port exposed by the
+# container
+docker run -p $LOCAL_PORT:8080 instore/koa-server
 
 echo "Listening on localhost:$LOCAL_PORT"

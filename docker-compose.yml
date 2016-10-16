@@ -1,0 +1,18 @@
+postgresql:
+    image: postgres:latest
+    ports: 
+        - "5432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=local
+server:
+    image: instore/koa-server
+    ports:
+        - "8080:8080"
+    links:
+      - postgresql
+    # environment:
+    #   - PGHOST=postgresql
+    #   - PGDATABASE=postgres
+    #   - PGUSER=postgres

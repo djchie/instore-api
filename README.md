@@ -2,6 +2,9 @@
     koa
     postgresql
     docker-compose
+      log into pg shell
+    connect to db
+    setup schema
     organize docker files
 2. Create mock shoe product data from Semantics3
     - Put this into a postgresql db
