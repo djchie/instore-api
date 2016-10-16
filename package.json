@@ -25,6 +25,7 @@
   "dependencies": {
     "koa": "^2.0.0-alpha.5",
     "koa-router": "^7.0.1",
+    "sequelize": "^3.24.3",
     "toml-require": "^1.1.0"
   },
   "devDependencies": {
