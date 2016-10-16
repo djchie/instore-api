@@ -4,7 +4,7 @@
   "description": "The backend code for instore",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon -L index.js",
     "stage": "echo 'TBD: Will run staging environment of server'",
     "prod": "echo 'TBD: Will run production environment of server'",
     "lint": "eslint ./server",
@@ -25,6 +25,8 @@
   "dependencies": {
     "koa": "^2.0.0-alpha.5",
     "koa-router": "^7.0.1",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2",
     "sequelize": "^3.24.3",
     "toml-require": "^1.1.0"
   },

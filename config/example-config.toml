@@ -12,7 +12,7 @@ version = '1.0'
 port = 8080
 
 [database]
-db = "test"
+db = "local"
 password = "password"
 user = "user"
 host = "postgresql"
