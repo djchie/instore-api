@@ -12,6 +12,8 @@ version = '1.0'
 port = 5000
 
 [database]
-server = ''
-ports = 8080
-
+db = "test"
+password = "password"
+user = "user"
+host = "postgresql"
+port = 5432

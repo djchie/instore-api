@@ -1,8 +1,8 @@
 1. Setup docker
-    connect to db via psql
-    setup initial users
-    setup schema
-    connect endpoints to db
+    connect endpoints to db via sequelize
+    setup schema via sequelize
+    convert and add data to sequelize
+    create fixtures
     organize docker files
 2. Create mock shoe product data from Semantics3
     - Put this into a postgresql db
