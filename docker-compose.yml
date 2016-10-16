@@ -1,14 +1,17 @@
-postgresql:
-    image: postgres:latest
-    ports: 
-        - "5432:5432"
-    environment:
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=local
-main:
-    image: instore/koa-server
-    ports:
-      - "8080:8080"
-    links:
-      - postgresql
+version: '2'
+
+services:
+  postgresql:
+      image: postgres:latest
+      ports: 
+          - "5432:5432"
+      environment:
+        - POSTGRES_USER=user
+        - POSTGRES_PASSWORD=password
+        - POSTGRES_DB=local
+  main:
+      image: instore/koa-server
+      ports:
+        - "8080:8080"
+      links:
+        - postgresql
