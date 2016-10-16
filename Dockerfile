@@ -8,8 +8,10 @@ WORKDIR /usr/src/app
 
 # Get essential packages
 RUN apt-get update
+RUN apt-get install -y build-essential
+RUN apt-get install -y sudo
 RUN apt-get install -y postgresql-client-9.4
-RUN apt-get install vim
+RUN apt-get install -y vim
 
 # Install app dependencies
 COPY package.json /usr/src/app/

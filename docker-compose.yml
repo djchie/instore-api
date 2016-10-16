@@ -6,13 +6,9 @@ postgresql:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=local
-server:
+main:
     image: instore/koa-server
     ports:
-        - "8080:8080"
+      - "8080:8080"
     links:
       - postgresql
-    # environment:
-    #   - PGHOST=postgresql
-    #   - PGDATABASE=postgres
-    #   - PGUSER=postgres
