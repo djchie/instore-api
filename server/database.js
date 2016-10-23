@@ -15,6 +15,8 @@ const connection = new Sequelize(
     dialect: 'postgres',
     port: config.database.port,
     host: config.database.host,
+    quoteIdentifiers: false,
+    freezeTableName: true,
   }
 );
 
