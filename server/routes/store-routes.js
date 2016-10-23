@@ -1,5 +1,9 @@
 import Router from 'koa-router';
 
+import database from '../database';
+
+const Store = database.models.Store;
+
 const storeRouter = new Router();
 
 storeRouter.get('/store', async (ctx, next) => {

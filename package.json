@@ -23,6 +23,7 @@
   "author": "Derrick Chie",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "koa": "^2.0.0-alpha.5",
     "koa-router": "^7.0.1",
     "pg": "^6.1.0",

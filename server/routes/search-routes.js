@@ -1,5 +1,7 @@
 import Router from 'koa-router';
 
+import database from '../database';
+
 const searchRouter = new Router();
 
 // query="", location="", filters={}, sort=""

@@ -1,6 +1,7 @@
 1. Setup docker
-    connect endpoints to db via sequelize
+    figure out where to put the sequelize points
     setup schema via sequelize
+    connect endpoints to db via sequelize
     convert and add data to sequelize
     create fixtures
     organize docker files
@@ -19,3 +20,7 @@ use posgres
 Figure out how server and client should interact... when the client side should be built... etc
 
 other action tiles, make sure the title is clicable as well
+
+
+1. `./scrips/docker/koa-server/build_image.sh`
+2. `docker-compose up`
