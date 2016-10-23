@@ -9,6 +9,7 @@ const inventorySchema = (DataTypes) => {
     stockCount: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
+      field: 'stock_count',
     },
     price: {
       type: DataTypes.FLOAT,
@@ -26,7 +27,6 @@ const inventoryModel = (sequelize, DataTypes) => {
       associate: (models) => {
       },
     },
-    underscored: true,
   });
 
   return Inventory;

@@ -11,6 +11,7 @@ const productSchema = (DataTypes) => {
     },
     imageUrl: {
       type: DataTypes.STRING,
+      field: 'image_url',
     },
     description: {
       type: DataTypes.STRING,
@@ -40,7 +41,6 @@ const productModel = (sequelize, DataTypes) => {
         });
       },
     },
-    underscored: true,
   });
 
   return Product;

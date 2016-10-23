@@ -17,6 +17,10 @@ const connection = new Sequelize(
     host: config.database.host,
     quoteIdentifiers: false,
     freezeTableName: true,
+    define: {
+      underscored: true,
+      underscoredAll: true,
+    },
   }
 );
 
