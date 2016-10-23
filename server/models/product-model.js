@@ -6,15 +6,42 @@ const productSchema = (DataTypes) => {
       primaryKey: true,
       allowNull: false,
     },
+    name: {
+      type: DataTypes.STRING,
+    },
+    imageUrl: {
+      type: DataTypes.STRING,
+      field: 'image_url',
+    },
+    description: {
+      type: DataTypes.STRING,
+    },
+    manufacturer: {
+      type: DataTypes.STRING,
+    },
+    category: {
+      type: DataTypes.STRING,
+    },
+    type: {
+      type: DataTypes.STRING,
+    },
   };
 };
 
-const options = {
-  tableName: 'product',
-};
-
 const productModel = (sequelize, DataTypes) => {
-  const Product = sequelize.define('Product', productSchema(DataTypes), options);
+  const Product = sequelize.define('Product', productSchema(DataTypes), {
+    tableName: 'product',
+    classMethods: {
+      associate: (models) => {
+        Product.hasMany(models.Inventory, {
+          foreignKey: {
+            name: 'product_id',
+            allowNull: false,
+          },
+        });
+      },
+    },
+  });
 
   return Product;
 };

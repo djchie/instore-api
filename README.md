@@ -1,5 +1,4 @@
 1. Setup docker
-    lowercase singular table names
     setup schema via sequelize
     connect endpoints to db via sequelize
     convert and add data to sequelize

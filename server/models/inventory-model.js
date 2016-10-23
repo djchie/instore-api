@@ -6,15 +6,36 @@ const inventorySchema = (DataTypes) => {
       primaryKey: true,
       allowNull: false,
     },
+    // productId: {
+    //   type: DataTypes.UUID,
+    //   allowNull: false,
+    //   field: 'product_id',
+    // },
+    // storeId: {
+    //   type: DataTypes.UUID,
+    //   allowNull: false,
+    //   field: 'store_id',
+    // },
+    stockCount: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      field: 'stock_count',
+    },
+    price: {
+      type: DataTypes.FLOAT,
+      defaultValue: 0,
+    },
   };
 };
 
-const options = {
-  tableName: 'inventory',
-};
-
 const inventoryModel = (sequelize, DataTypes) => {
-  const Inventory = sequelize.define('Inventory', inventorySchema(DataTypes), options);
+  const Inventory = sequelize.define('Inventory', inventorySchema(DataTypes), {
+    tableName: 'inventory',
+    classMethods: {
+      associate: (models) => {
+      },
+    },
+  });
 
   return Inventory;
 };
