@@ -6,20 +6,9 @@ const inventorySchema = (DataTypes) => {
       primaryKey: true,
       allowNull: false,
     },
-    // productId: {
-    //   type: DataTypes.UUID,
-    //   allowNull: false,
-    //   field: 'product_id',
-    // },
-    // storeId: {
-    //   type: DataTypes.UUID,
-    //   allowNull: false,
-    //   field: 'store_id',
-    // },
     stockCount: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
-      field: 'stock_count',
     },
     price: {
       type: DataTypes.FLOAT,
@@ -28,6 +17,8 @@ const inventorySchema = (DataTypes) => {
   };
 };
 
+// http://stackoverflow.com/questions/22958683/how-to-implement-many-to-many-association-in-sequelize
+
 const inventoryModel = (sequelize, DataTypes) => {
   const Inventory = sequelize.define('Inventory', inventorySchema(DataTypes), {
     tableName: 'inventory',
@@ -35,6 +26,7 @@ const inventoryModel = (sequelize, DataTypes) => {
       associate: (models) => {
       },
     },
+    underscored: true,
   });
 
   return Inventory;

@@ -11,7 +11,6 @@ const storeSchema = (DataTypes) => {
     },
     streetAddress: {
       type: DataTypes.STRING,
-      field: 'streed_address',
     },
     city: {
       type: DataTypes.STRING,
@@ -24,14 +23,12 @@ const storeSchema = (DataTypes) => {
     },
     zipCode: {
       type: DataTypes.STRING,
-      field: 'zip_code',
     },
     email: {
       type: DataTypes.STRING,
     },
     phoneNumber: {
       type: DataTypes.STRING,
-      field: 'phone_number',
     },
     category: {
       type: DataTypes.STRING,
@@ -58,6 +55,7 @@ const storeModel = (sequelize, DataTypes) => {
         });
       },
     },
+    underscored: true,
   });
 
   return Store;
