@@ -1,10 +1,10 @@
 const createInventory = (sequelize, DataTypes) => {
   const Inventory = sequelize.define('Inventory', {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
-      autoIncrement: true,
-      unique: true,
+      allowNull: false,
     },
   });
 
