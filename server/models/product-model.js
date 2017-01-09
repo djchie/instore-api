@@ -16,13 +16,23 @@ const productSchema = (DataTypes) => {
     description: {
       type: DataTypes.STRING,
     },
-    manufacturer: {
+    brand: {
       type: DataTypes.STRING,
     },
     category: {
       type: DataTypes.STRING,
     },
     type: {
+      type: DataTypes.STRING,
+    },
+    marketPrice: {
+      type: DataTypes.FLOAT,
+      field: 'market_price',
+    },
+    size: {
+      type: DataTypes.STRING,
+    },
+    color: {
       type: DataTypes.STRING,
     },
   };

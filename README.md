@@ -1,5 +1,4 @@
-1. Setup docker
-    setup schema via sequelize
+d1. Setup docker
     connect endpoints to db via sequelize
     convert and add data to sequelize
     create fixtures
@@ -23,3 +22,19 @@ other action tiles, make sure the title is clicable as well
 
 1. `./scrips/docker/koa-server/build_image.sh`
 2. `docker-compose up`
+
+
+
+
+ean
+gender
+brand
+model
+price
+color
+size
+description
+images
+
+
+http://localhost:8080/api/1.0/product

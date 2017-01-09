@@ -2,7 +2,7 @@ import Router from 'koa-router';
 
 import database from '../database';
 
-const Inventory from database.models.Inventory;
+const Inventory = database.models.Inventory;
 
 const inventoryRouter = new Router();
 
