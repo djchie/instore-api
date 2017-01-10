@@ -20,7 +20,7 @@ Figure out how server and client should interact... when the client side should 
 other action tiles, make sure the title is clicable as well
 
 
-1. `./scrips/docker/koa-server/build_image.sh`
+1. `./scripts/docker/koa-server/build_image.sh`
 2. `docker-compose up`
 
 
@@ -36,5 +36,11 @@ size
 description
 images
 
-
+http://localhost:8080/api/1.0/
 http://localhost:8080/api/1.0/product
+
+re format nike data,
+insert into psql db
+dump data as fixture
+write fixture freeze script
+write fixture load script
