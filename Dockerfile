@@ -1,17 +1,21 @@
 # This file is used to build a docker image
 
-FROM node:latest
+FROM ubuntu:16.04
 
 # Create app directory
 RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app    
 
 # Get essential packages
-RUN apt-get update
-RUN apt-get install -y build-essential
-RUN apt-get install -y sudo
-RUN apt-get install -y postgresql-client-9.4
-RUN apt-get install -y vim
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    postgresql-client \
+    sudo \
+    vim
+
+RUN curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - && \
+    apt-get install -y nodejs
 
 # Install app dependencies
 COPY package.json /usr/src/app/

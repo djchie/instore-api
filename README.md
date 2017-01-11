@@ -39,8 +39,15 @@ images
 http://localhost:8080/api/1.0/
 http://localhost:8080/api/1.0/product
 
-re format nike data,
-insert into psql db
+figure out how to persist the data after closing docker compose
+
+find store data
+  scrape yelp or use their api
+    nike, champ, footlocker, shriek
+add hours to store model
+format store data
+import store data
+
 dump data as fixture
 write fixture freeze script
 write fixture load script
