@@ -10,4 +10,4 @@ then
     exit 1
 fi
 
-docker exec -it $container_id /bin/bash
+docker exec -it $container_id /bin/bash ./data/load_data.sh

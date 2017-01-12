@@ -2,7 +2,7 @@
 
 cd ${0%/*}
 
-container_id=$(../docker/get_container_id.sh)
+container_id=$(./get_container_id.sh)
 
 if [[ -z "$container_id" ]]
 then
@@ -10,4 +10,4 @@ then
     exit 1
 fi
 
-docker exec -it $container_id /bin/bash
+docker kill $container_id

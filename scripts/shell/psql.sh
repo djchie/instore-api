@@ -2,5 +2,12 @@
 
 cd ${0%/*}
 
-../docker/postgresql/shell.sh
+container_id=$(../docker/get_container_id.sh)
 
+if [[ -z "$container_id" ]]
+then
+    echo "Could not find container id"
+    exit 1
+fi
+
+docker exec -it $container_id /bin/bash -c 'PGPASSWORD=password psql -U user -h postgresql -w local'

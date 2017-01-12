@@ -24,6 +24,7 @@ other action tiles, make sure the title is clicable as well
 2. `docker-compose up`
 
 
+Bases image off of ubuntu 16.04, upgrades node to 7, and upgrades psql and pg_dump to 9.5.5
 
 
 ean
@@ -39,7 +40,6 @@ images
 http://localhost:8080/api/1.0/
 http://localhost:8080/api/1.0/product
 
-figure out how to persist the data after closing docker compose
 
 find store data
   scrape yelp or use their api
@@ -48,6 +48,15 @@ add hours to store model
 format store data
 import store data
 
-dump data as fixture
-write fixture freeze script
-write fixture load script
+
+
+
+help picato debug
+
+create endpoint for getting all products (make sure it's formatted correctly)
+
+
+
+You may have noticed that once you stop the container, if you previously wrote some data on the DB, that data is lost. This is because by default Docker containers are not persistent. We can resolve this problem using a data container.
+
+possible setup data container?
