@@ -1,0 +1,846 @@
+{
+  "businesses": [
+    {
+      "price": "$$",
+      "display_phone": "(408) 374-4147",
+      "review_count": 76,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "1600 Saratoga Ave",
+          "San Jose, CA 95129"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95129",
+        "address1": "1600 Saratoga Ave"
+      },
+      "id": "nike-factory-store-san-jose",
+      "coordinates": {
+        "latitude": 37.2923775451809,
+        "longitude": -121.988507173955
+      },
+      "phone": "+14083744147",
+      "categories": [
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        },
+        {
+          "alias": "outlet_stores",
+          "title": "Outlet Stores"
+        },
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        }
+      ],
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/_ZbbF6rNUkUG36WF_AMVBg/o.jpg",
+      "is_closed": false,
+      "name": "Nike Factory Store",
+      "rating": 4,
+      "distance": 9533.74062071,
+      "url": "https://www.yelp.com/biz/nike-factory-store-san-jose?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 942-6457",
+      "review_count": 92,
+      "location": {
+        "city": "Milpitas",
+        "state": "CA",
+        "display_address": [
+          "447 Great Mall Dr",
+          "Ste 484",
+          "Milpitas, CA 95035"
+        ],
+        "address2": "Ste 484",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95035",
+        "address1": "447 Great Mall Dr"
+      },
+      "id": "nike-factory-store-milpitas",
+      "coordinates": {
+        "latitude": 37.414992257712,
+        "longitude": -121.896709107796
+      },
+      "phone": "+14089426457",
+      "categories": [
+        {
+          "alias": "outlet_stores",
+          "title": "Outlet Stores"
+        },
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        },
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        }
+      ],
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/M_Zt1CLHahNgBtnSJWfYNg/o.jpg",
+      "is_closed": false,
+      "name": "Nike Factory Store",
+      "rating": 3.5,
+      "distance": 11002.336595679999,
+      "url": "https://www.yelp.com/biz/nike-factory-store-milpitas?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 847-4300",
+      "review_count": 80,
+      "location": {
+        "city": "Gilroy",
+        "state": "CA",
+        "display_address": [
+          "8225 Arroyo Cir",
+          "Ste 21",
+          "Gilroy, CA 95020"
+        ],
+        "address2": "Ste 21",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95020",
+        "address1": "8225 Arroyo Cir"
+      },
+      "id": "nike-factory-store-gilroy",
+      "coordinates": {
+        "latitude": 37.0214218,
+        "longitude": -121.562516
+      },
+      "phone": "+14088474300",
+      "categories": [
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        },
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        },
+        {
+          "alias": "outlet_stores",
+          "title": "Outlet Stores"
+        }
+      ],
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/C9fElkTxbF8xWzoVHS_KcA/o.jpg",
+      "is_closed": false,
+      "name": "Nike Factory Store",
+      "rating": 3,
+      "distance": 43446.40890676,
+      "url": "https://www.yelp.com/biz/nike-factory-store-gilroy?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(510) 483-3650",
+      "review_count": 348,
+      "location": {
+        "city": "San Leandro",
+        "state": "CA",
+        "display_address": [
+          "1275 Marina Blvd",
+          "San Leandro, CA 94577"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "94577",
+        "address1": "1275 Marina Blvd"
+      },
+      "id": "nike-clearance-store-san-leandro",
+      "coordinates": {
+        "latitude": 37.7110148538933,
+        "longitude": -122.163562887188
+      },
+      "phone": "+15104833650",
+      "categories": [
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        },
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        },
+        {
+          "alias": "outlet_stores",
+          "title": "Outlet Stores"
+        }
+      ],
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Jd4ijbZsY2s2-D7zIvGQIg/o.jpg",
+      "is_closed": false,
+      "name": "Nike Clearance Store",
+      "rating": 4,
+      "distance": 50279.78724726,
+      "url": "https://www.yelp.com/biz/nike-clearance-store-san-leandro?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$$",
+      "display_phone": "(650) 326-6957",
+      "review_count": 65,
+      "location": {
+        "city": "Palo Alto",
+        "state": "CA",
+        "display_address": [
+          "6 Stanford Shopping Ctr",
+          "Ste 6-A",
+          "Palo Alto, CA 94304"
+        ],
+        "address2": "Ste 6-A",
+        "address3": "",
+        "country": "US",
+        "zip_code": "94304",
+        "address1": "6 Stanford Shopping Ctr"
+      },
+      "id": "nike-running-palo-alto",
+      "coordinates": {
+        "latitude": 37.443907141078,
+        "longitude": -122.17091387452
+      },
+      "phone": "+16503266957",
+      "categories": [
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        },
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        }
+      ],
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/10UU4Zq-3cEr_Xam6X0_rA/o.jpg",
+      "is_closed": false,
+      "name": "Nike Running",
+      "rating": 3.5,
+      "distance": 28960.34527846,
+      "url": "https://www.yelp.com/biz/nike-running-palo-alto?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(925) 454-1272",
+      "review_count": 8,
+      "location": {
+        "city": "Livermore",
+        "state": "CA",
+        "display_address": [
+          "3202 Livermore Outlets Dr",
+          "Livermore, CA 94551"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "94551",
+        "address1": "3202 Livermore Outlets Dr"
+      },
+      "id": "nike-factory-store-livermore-3",
+      "coordinates": {
+        "latitude": 37.6981944,
+        "longitude": -121.8405641
+      },
+      "phone": "+19254541272",
+      "categories": [
+        {
+          "alias": "outlet_stores",
+          "title": "Outlet Stores"
+        },
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        },
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        }
+      ],
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tYl5TyITtduQAUBAcGqpkg/o.jpg",
+      "is_closed": false,
+      "name": "Nike Factory Store",
+      "rating": 3,
+      "distance": 42663.576041219996,
+      "url": "https://www.yelp.com/biz/nike-factory-store-livermore-3?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$$",
+      "display_phone": "(415) 392-6453",
+      "review_count": 138,
+      "location": {
+        "city": "San Francisco",
+        "state": "CA",
+        "display_address": [
+          "278 Post St",
+          "San Francisco, CA 94108"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "94108",
+        "address1": "278 Post St"
+      },
+      "id": "nike-brand-san-francisco",
+      "coordinates": {
+        "latitude": 37.7886626819595,
+        "longitude": -122.406667334988
+      },
+      "phone": "+14153926453",
+      "categories": [
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        },
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        }
+      ],
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/TMseA_FDhzvtcZEQVqZUIA/o.jpg",
+      "is_closed": false,
+      "name": "Nike Brand",
+      "rating": 3,
+      "distance": 69793.776653,
+      "url": "https://www.yelp.com/biz/nike-brand-san-francisco?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 297-0100",
+      "review_count": 230,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "1115 Lincoln Avenue",
+          "San Jose, CA 95125"
+        ],
+        "address2": "",
+        "address3": null,
+        "country": "US",
+        "zip_code": "95125",
+        "address1": "1115 Lincoln Avenue"
+      },
+      "id": "athletic-performance-ii-san-jose-2",
+      "coordinates": {
+        "latitude": 37.30791,
+        "longitude": -121.9012
+      },
+      "phone": "+14082970100",
+      "categories": [
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        },
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        }
+      ],
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/EX432jfQP0b3bpv-F0gteA/o.jpg",
+      "is_closed": false,
+      "name": "Athletic Performance II",
+      "rating": 5,
+      "distance": 1705.0593589159998,
+      "url": "https://www.yelp.com/biz/athletic-performance-ii-san-jose-2?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$$",
+      "display_phone": "(408) 982-5805",
+      "review_count": 22,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "210 Jackson St",
+          "San Jose, CA 95112"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95112",
+        "address1": "210 Jackson St"
+      },
+      "id": "sole-on-ice-san-jose",
+      "coordinates": {
+        "latitude": 37.34894,
+        "longitude": -121.89394
+      },
+      "phone": "+14089825805",
+      "categories": [
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        }
+      ],
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/SKuZSgTp9-64LkMg6ejQ0w/o.jpg",
+      "is_closed": false,
+      "name": "Sole on Ice",
+      "rating": 4.5,
+      "distance": 3696.1341631799996,
+      "url": "https://www.yelp.com/biz/sole-on-ice-san-jose?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 995-0677",
+      "review_count": 66,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "108 Paseo De San Antonio",
+          "San Jose, CA 95113"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95113",
+        "address1": "108 Paseo De San Antonio"
+      },
+      "id": "circle-a-san-jose",
+      "coordinates": {
+        "latitude": 37.3334244601748,
+        "longitude": -121.886061464901
+      },
+      "phone": "+14089950677",
+      "categories": [
+        {
+          "alias": "outdoorgear",
+          "title": "Outdoor Gear"
+        },
+        {
+          "alias": "skateshops",
+          "title": "Skate Shops"
+        }
+      ],
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/WIDH52e3q_EGeTTuIjK1Ww/o.jpg",
+      "is_closed": false,
+      "name": "Circle-A",
+      "rating": 4.5,
+      "distance": 1885.8508442419998,
+      "url": "https://www.yelp.com/biz/circle-a-san-jose?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 551-0413",
+      "review_count": 24,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "1338 Saratoga Ave",
+          "San Jose, CA 95129"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95129",
+        "address1": "1338 Saratoga Ave"
+      },
+      "id": "soccer-pro-san-jose-2",
+      "coordinates": {
+        "latitude": 37.3000327,
+        "longitude": -121.9822385
+      },
+      "phone": "+14085510413",
+      "categories": [
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        },
+        {
+          "alias": "outdoorgear",
+          "title": "Outdoor Gear"
+        }
+      ],
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Q0DlpS-sLoGR8lJC3a9pRQ/o.jpg",
+      "is_closed": false,
+      "name": "Soccer Pro",
+      "rating": 3.5,
+      "distance": 8737.8712965,
+      "url": "https://www.yelp.com/biz/soccer-pro-san-jose-2?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$$",
+      "display_phone": "(408) 557-8721",
+      "review_count": 204,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "334 Santana Row",
+          "Ste 1035",
+          "San Jose, CA 95128"
+        ],
+        "address2": "Ste 1035",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95128",
+        "address1": "334 Santana Row"
+      },
+      "id": "lululemon-athletica-san-jose",
+      "coordinates": {
+        "latitude": 37.3214,
+        "longitude": -121.94745
+      },
+      "phone": "+14085578721",
+      "categories": [
+        {
+          "alias": "womenscloth",
+          "title": "Women's Clothing"
+        },
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        },
+        {
+          "alias": "yoga",
+          "title": "Yoga"
+        }
+      ],
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/I746aaHVNp-CcopIvIBkxg/o.jpg",
+      "is_closed": false,
+      "name": "lululemon athletica",
+      "rating": 3.5,
+      "distance": 5533.31969236,
+      "url": "https://www.yelp.com/biz/lululemon-athletica-san-jose?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 551-2245",
+      "review_count": 111,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "1600 Saratoga Ave",
+          "San Jose, CA 95129"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95129",
+        "address1": "1600 Saratoga Ave"
+      },
+      "id": "westgate-center-san-jose",
+      "coordinates": {
+        "latitude": 37.291983,
+        "longitude": -121.988633
+      },
+      "phone": "+14085512245",
+      "categories": [
+        {
+          "alias": "shoppingcenters",
+          "title": "Shopping Centers"
+        }
+      ],
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/QgpCDdQ-9xCf6DPyHbwXgQ/o.jpg",
+      "is_closed": false,
+      "name": "Westgate Center",
+      "rating": 3,
+      "distance": 9556.48783694,
+      "url": "https://www.yelp.com/biz/westgate-center-san-jose?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 629-1826",
+      "review_count": 8,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "925 Blossom Hill Rd #1342",
+          "Oakridge Mall",
+          "San Jose, CA 95123"
+        ],
+        "address2": "Oakridge Mall",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95123",
+        "address1": "925 Blossom Hill Rd #1342"
+      },
+      "id": "famous-footwear-san-jose-2",
+      "coordinates": {
+        "latitude": 37.25199,
+        "longitude": -121.86203
+      },
+      "phone": "+14086291826",
+      "categories": [
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        },
+        {
+          "alias": "accessories",
+          "title": "Accessories"
+        },
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        }
+      ],
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/LURV74kEee8LixxM2twldA/o.jpg",
+      "is_closed": false,
+      "name": "Famous Footwear",
+      "rating": 3,
+      "distance": 7375.9431814,
+      "url": "https://www.yelp.com/biz/famous-footwear-san-jose-2?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 238-3200",
+      "review_count": 48,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "2200 Eastridge Mall",
+          "Ste 2091",
+          "San Jose, CA 95122"
+        ],
+        "address2": "Ste 2091",
+        "address3": null,
+        "country": "US",
+        "zip_code": "95122",
+        "address1": "2200 Eastridge Mall"
+      },
+      "id": "shoe-palace-san-jose-7",
+      "coordinates": {
+        "latitude": 37.3255349,
+        "longitude": -121.8133811
+      },
+      "phone": "+14082383200",
+      "categories": [
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        }
+      ],
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/TMLD9iSY0L4YXf1gAFZiNA/o.jpg",
+      "is_closed": false,
+      "name": "Shoe Palace",
+      "rating": 3,
+      "distance": 6419.277133892,
+      "url": "https://www.yelp.com/biz/shoe-palace-san-jose-7?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 378-5064",
+      "review_count": 10,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "Westgate Mall",
+          "1600 Saratoga Avenue",
+          "San Jose, CA 95129"
+        ],
+        "address2": "1600 Saratoga Avenue",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95129",
+        "address1": "Westgate Mall"
+      },
+      "id": "famous-footwear-san-jose-3",
+      "coordinates": {
+        "latitude": 37.2926122,
+        "longitude": -121.9906822
+      },
+      "phone": "+14083785064",
+      "categories": [
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        },
+        {
+          "alias": "accessories",
+          "title": "Accessories"
+        },
+        {
+          "alias": "sportswear",
+          "title": "Sports Wear"
+        }
+      ],
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/888nndUzwjHtGx-39mZeCA/o.jpg",
+      "is_closed": false,
+      "name": "Famous Footwear",
+      "rating": 4,
+      "distance": 9660.9323936,
+      "url": "https://www.yelp.com/biz/famous-footwear-san-jose-3?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 374-4144",
+      "review_count": 316,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "1600 Saratoga Ave",
+          "San Jose, CA 95129"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95129",
+        "address1": "1600 Saratoga Ave"
+      },
+      "id": "nordstrom-rack-san-jose",
+      "coordinates": {
+        "latitude": 37.2930190851729,
+        "longitude": -121.987222798395
+      },
+      "phone": "+14083744144",
+      "categories": [
+        {
+          "alias": "deptstores",
+          "title": "Department Stores"
+        },
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        },
+        {
+          "alias": "womenscloth",
+          "title": "Women's Clothing"
+        }
+      ],
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/4Iv0z1AjMePEDW-nWg85Ew/o.jpg",
+      "is_closed": false,
+      "name": "Nordstrom Rack",
+      "rating": 3.5,
+      "distance": 9404.293679678,
+      "url": "https://www.yelp.com/biz/nordstrom-rack-san-jose?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "display_phone": "(866) 370-0419",
+      "review_count": 434,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "1072 S De Anza Blvd",
+          "Ste A107-525",
+          "San Jose, CA 95129"
+        ],
+        "address2": "Ste A107-525",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95129",
+        "address1": "1072 S De Anza Blvd"
+      },
+      "id": "perfect-shine-housekeeping-san-jose",
+      "coordinates": {
+        "latitude": 37.3073667,
+        "longitude": -122.0320451
+      },
+      "phone": "+18663700419",
+      "categories": [
+        {
+          "alias": "homecleaning",
+          "title": "Home Cleaning"
+        },
+        {
+          "alias": "windowwashing",
+          "title": "Window Washing"
+        },
+        {
+          "alias": "carpet_cleaning",
+          "title": "Carpet Cleaning"
+        }
+      ],
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/cH3T7CURyhz21QngTPwI4w/o.jpg",
+      "is_closed": false,
+      "name": "Perfect Shine Housekeeping",
+      "rating": 4,
+      "distance": 12993.54159555,
+      "url": "https://www.yelp.com/biz/perfect-shine-housekeeping-san-jose?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$",
+      "display_phone": "(408) 888-8802",
+      "review_count": 18,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "634 Giguere Ct",
+          "San Jose, CA 95133"
+        ],
+        "address2": null,
+        "address3": "",
+        "country": "US",
+        "zip_code": "95133",
+        "address1": "634 Giguere Ct"
+      },
+      "id": "graphic-affect-branding-san-jose",
+      "coordinates": {
+        "latitude": 37.3666027,
+        "longitude": -121.8603676
+      },
+      "phone": "+14088888802",
+      "categories": [
+        {
+          "alias": "graphicdesign",
+          "title": "Graphic Design"
+        },
+        {
+          "alias": "screen_printing_tshirt_printing",
+          "title": "Screen Printing/T-Shirt Printing"
+        },
+        {
+          "alias": "embroideryandcrochet",
+          "title": "Embroidery & Crochet"
+        }
+      ],
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/OUanTJ1nWNdbu2plH4OdxQ/o.jpg",
+      "is_closed": false,
+      "name": "Graphic Affect Branding",
+      "rating": 5,
+      "distance": 5986.013194036,
+      "url": "https://www.yelp.com/biz/graphic-affect-branding-san-jose?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    },
+    {
+      "price": "$$",
+      "display_phone": "(408) 280-0608",
+      "review_count": 14,
+      "location": {
+        "city": "San Jose",
+        "state": "CA",
+        "display_address": [
+          "2206 Business Cir",
+          "San Jose, CA 95128"
+        ],
+        "address2": "",
+        "address3": "",
+        "country": "US",
+        "zip_code": "95128",
+        "address1": "2206 Business Cir"
+      },
+      "id": "shoe-palace-san-jose-3",
+      "coordinates": {
+        "latitude": 37.32235,
+        "longitude": -121.93243
+      },
+      "phone": "+14082800608",
+      "categories": [
+        {
+          "alias": "shoes",
+          "title": "Shoe Stores"
+        }
+      ],
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Lq7T6HcyMuYNKCB1vDk1LQ/o.jpg",
+      "is_closed": false,
+      "name": "Shoe Palace",
+      "rating": 2.5,
+      "distance": 4227.727167696,
+      "url": "https://www.yelp.com/biz/shoe-palace-san-jose-3?adjust_creative=XEh56vOnV01kvNbCpYW7YA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XEh56vOnV01kvNbCpYW7YA"
+    }
+  ],
+  "region": {
+    "center": {
+      "latitude": 37.404709490979755,
+      "longitude": -121.985647217494
+    }
+  },
+  "total": 1426
+}

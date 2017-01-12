@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// Run this inside the container
+
 require('babel-core/register')({
   plugins: ['transform-async-to-generator'],
 });
@@ -15,7 +17,7 @@ database.sync({ force: true }).then(() => {
   const Inventory = database.models.Inventory;
   const User = database.models.Product;
 
-  fs.readFile('./nike-data.json', 'utf-8', (error, data) => {
+  fs.readFile('./product-data.json', 'utf-8', (error, data) => {
     if (error) {
       console.log('There\'s a fucking error');
       console.log(error);
