@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict'
 
 // Run this inside the container
 
@@ -11,11 +12,9 @@ require("babel-polyfill");
 const fs = require('fs');
 
 const database = require('../server/database').default;
-database.sync({ force: true }).then(() => {
-  const Product = database.models.Product;
-  const Store = database.models.Store;
-  const Inventory = database.models.Inventory;
-  const User = database.models.Product;
+const Product = database.models.Product;
+
+Product.sync({ force: true }).then(() => {
 
   fs.readFile('./product-data.json', 'utf-8', (error, data) => {
     if (error) {

@@ -6,41 +6,29 @@ const storeSchema = (DataTypes) => {
       primaryKey: true,
       allowNull: false,
     },
+    yelpId: {
+      type: DataTypes.STRING,
+      field: 'yelp_id',
+    },
     name: {
       type: DataTypes.STRING,
     },
-    streetAddress: {
-      type: DataTypes.STRING,
-      field: 'street_address',
+    location: {
+      type: DataTypes.JSONB,
     },
-    city: {
+    imageUrl: {
       type: DataTypes.STRING,
-    },
-    state: {
-      type: DataTypes.STRING,
-    },
-    country: {
-      type: DataTypes.STRING,
-    },
-    zipCode: {
-      type: DataTypes.STRING,
-      field: 'zip_code',
-    },
-    email: {
-      type: DataTypes.STRING,
+      field: 'image_url',
     },
     phoneNumber: {
       type: DataTypes.STRING,
       field: 'phone_number',
     },
     category: {
-      type: DataTypes.STRING,
+      type: DataTypes.ARRAY(DataTypes.JSONB),
     },
-    longitude: {
-      type: DataTypes.FLOAT,
-    },
-    latitude: {
-      type: DataTypes.FLOAT,
+    coordinate: {
+      type: DataTypes.JSONB,
     },
   };
 };
