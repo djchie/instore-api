@@ -50,15 +50,14 @@ Store.sync({ force: true }).then(() => {
 
     // hours
     for (let store of stores) {
-      console.log(store);
       Store.create({
-        yelpId: stores.yelpId,
-        name: stores.name,
-        location: stores.location,
-        imageUrl: stores.imageUrl,
-        phoneNumber: stores.phoneNumber,
-        category: stores.category,
-        coordinate: stores.coordinate,
+        yelpId: store.yelpId,
+        name: store.name,
+        location: store.location,
+        imageUrl: store.imageUrl,
+        phoneNumber: store.phoneNumber,
+        category: store.category,
+        coordinate: store.coordinate,
       });
     }
   });
