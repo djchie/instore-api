@@ -14,19 +14,30 @@ const fs = require('fs');
 const database = require('../server/database').default;
 const Store = database.models.Store;
 
+// For importing store data
 Store.sync({ force: true }).then(() => {
-
-  fs.readFile('./store-data.json', 'utf-8', (error, data) => {
+  fs.readFile('./store-hour-data.json', 'utf-8', (error, data) => {
     if (error) {
       console.log('There\'s a fucking error');
       console.log(error);
     }
-
     let parsed = JSON.parse(data);
     let stores = [];
 
     for (let i = 0; i < parsed.length; i++) {
       const storeData = parsed[i];
+      let hourData = storeData['hours'] !== undefined ? storeData['hours'][0] : undefined;
+
+      let hour = undefined;
+
+      if (hourData) {
+        hour = {
+          open: hourData['open'],
+          hours_type: hourData['hours_type'],
+          is_open_now: hourData['is_open_now'],
+        }
+      }
+
       const store = {
         yelpId: storeData['id'],
         name: storeData['name'],
@@ -40,6 +51,7 @@ Store.sync({ force: true }).then(() => {
           country: storeData['location']['country'],
         },
         imageUrl: storeData['image_url'],
+        hour: hour,
         phoneNumber: storeData['phone'],
         category: storeData['categories'],
         coordinate: storeData['coordinates'],
@@ -48,13 +60,13 @@ Store.sync({ force: true }).then(() => {
       stores.push(store);
     }
 
-    // hours
     for (let store of stores) {
       Store.create({
         yelpId: store.yelpId,
         name: store.name,
         location: store.location,
         imageUrl: store.imageUrl,
+        hour: store.hour,
         phoneNumber: store.phoneNumber,
         category: store.category,
         coordinate: store.coordinate,
@@ -62,3 +74,4 @@ Store.sync({ force: true }).then(() => {
     }
   });
 });
+

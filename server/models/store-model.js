@@ -24,6 +24,9 @@ const storeSchema = (DataTypes) => {
       type: DataTypes.STRING,
       field: 'phone_number',
     },
+    hour: {
+      type: DataTypes.JSONB,
+    },
     category: {
       type: DataTypes.ARRAY(DataTypes.JSONB),
     },

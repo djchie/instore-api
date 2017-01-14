@@ -10,7 +10,8 @@ To run locally:
 3. `./scripts/data/load_data.sh`
 
 
-
+\x off;\pset format wrapped
+\x on
 
 
 ean
