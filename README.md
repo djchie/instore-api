@@ -32,13 +32,29 @@ http://localhost:8080/api/1.0/product
 TODO:
 
 
-import store data
-  add in store hours into schema
-  import store hours
-  freeze database
 
-generate inventory information
-  freeze database
+
+RESEARCH change database stuff to underscore?
+
+figure how to create inventory via "productId" and "storeId", rather than "product_id" and "store_id"
+
+OR
+
+convert all the model fields to underscore
+
+make on cascade delete
+
+
+Fix the following:
+
+Error with reset database
+
+Figure out what these errors are about:
+  multiple primary keys for table "product" are not allowed
+  multiple primary keys for table "store" are not allowed
+  multiple primary keys for table "inventory" are not allowed
+
+
 
 create endpoint for getting all products (make sure it's formatted correctly)
 

@@ -85,3 +85,29 @@ Inventory.sync({ force: true }).then(() => {
 //   console.log(store);
 //   console.log(store.getInventories);
 // });
+
+// const productId = '7c189b6e-30be-487c-b616-ca64dc21e0f6';
+// const storeId = '510adb69-907d-40fe-9388-60b6b5262f0d';
+// const stockCount = 34;
+// const price = 99.99;
+
+// Inventory.create({
+//   product_id: productId,
+//   store_id: storeId,
+//   stockCount: stockCount,
+//   price: price,
+// }).then((inventory) => {
+//   console.log('Inventory created!');
+// }).catch((error) => {
+//   console.log(error);
+// });
+
+// console.log(Inventory);
+
+// Inventory.findOne({
+//   where: {
+//     id: 'e6573ee2-5f2b-4800-b96b-3fd20880637f',
+//   }
+// }).then((inventory) => {
+//   console.log(inventory.productId);
+// })
