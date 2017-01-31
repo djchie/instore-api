@@ -6,9 +6,8 @@ const storeSchema = (DataTypes) => {
       primaryKey: true,
       allowNull: false,
     },
-    yelpId: {
+    yelp_id: {
       type: DataTypes.STRING,
-      field: 'yelp_id',
     },
     name: {
       type: DataTypes.STRING,
@@ -16,13 +15,11 @@ const storeSchema = (DataTypes) => {
     location: {
       type: DataTypes.JSONB,
     },
-    imageUrl: {
+    image_url: {
       type: DataTypes.STRING,
-      field: 'image_url',
     },
-    phoneNumber: {
+    phone_number: {
       type: DataTypes.STRING,
-      field: 'phone_number',
     },
     hour: {
       type: DataTypes.JSONB,

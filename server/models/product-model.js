@@ -9,9 +9,8 @@ const productSchema = (DataTypes) => {
     name: {
       type: DataTypes.STRING,
     },
-    imageUrl: {
+    image_url: {
       type: DataTypes.STRING,
-      field: 'image_url',
     },
     description: {
       type: DataTypes.STRING,
@@ -25,9 +24,8 @@ const productSchema = (DataTypes) => {
     type: {
       type: DataTypes.STRING,
     },
-    marketPrice: {
+    market_price: {
       type: DataTypes.FLOAT,
-      field: 'market_price',
     },
     size: {
       type: DataTypes.STRING,

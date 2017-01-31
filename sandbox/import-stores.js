@@ -39,7 +39,7 @@ Store.sync({ force: true }).then(() => {
       }
 
       const store = {
-        yelpId: storeData['id'],
+        yelp_id: storeData['id'],
         name: storeData['name'],
         location: {
           address1: storeData['location']['address1'],
@@ -50,9 +50,9 @@ Store.sync({ force: true }).then(() => {
           zip_code: storeData['location']['zip_code'],
           country: storeData['location']['country'],
         },
-        imageUrl: storeData['image_url'],
+        image_url: storeData['image_url'],
         hour: hour,
-        phoneNumber: storeData['phone'],
+        phone_number: storeData['phone'],
         category: storeData['categories'],
         coordinate: storeData['coordinates'],
       }
@@ -62,12 +62,12 @@ Store.sync({ force: true }).then(() => {
 
     for (let store of stores) {
       Store.create({
-        yelpId: store.yelpId,
+        yelp_id: store.yelp_id,
         name: store.name,
         location: store.location,
-        imageUrl: store.imageUrl,
+        image_url: store.image_url,
         hour: store.hour,
-        phoneNumber: store.phoneNumber,
+        phone_number: store.phone_number,
         category: store.category,
         coordinate: store.coordinate,
       });

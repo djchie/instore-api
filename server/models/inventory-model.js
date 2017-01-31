@@ -6,10 +6,9 @@ const inventorySchema = (DataTypes) => {
       primaryKey: true,
       allowNull: false,
     },
-    stockCount: {
+    stock_count: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
-      field: 'stock_count',
     },
     price: {
       type: DataTypes.FLOAT,
