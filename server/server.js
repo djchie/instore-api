@@ -1,6 +1,7 @@
 import Koa from 'koa';
 import Router from 'koa-router';
 import Sequelize from 'sequelize';
+import convert from 'koa-convert';
 
 import logger from 'koa-logger';
 import responseTime from 'koa-response-time';
@@ -21,10 +22,10 @@ database.sync({
 });
 
 // Logs requests made and reponses sent
-server.use(logger());
+server.use(convert(logger()));
 
 // Adds a X-Response-Time in the response header
-server.use(responseTime());
+server.use(convert(responseTime()));
 
 // response middleware
 router.get('/', async (ctx, next) => {
