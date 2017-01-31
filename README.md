@@ -2,14 +2,21 @@
 
 Figure out how server and client should interact... when the client side should be built... etc
 
+To manually generate shoe mock data
+1. `./scripts/shell/koa.sh`
+1. `cd sandbox`
+1. `./sandbox/import-products.js`
+1. `./sandbox/import-stores.js`
+1. `./sandbox/generate-inventories.js`
 
+To build the instore image:
+1. `./scripts/docker/build_image.sh`
 
 To run locally:
-1. `./scripts/docker/build_image.sh`
-2. `docker-compose up`
-3. `./scripts/data/load_data.sh`
+1. `docker-compose up`
+1. `./scripts/data/load_data.sh`
 
-
+Ue postgresql settings
 \x off;\pset format wrapped
 \x on
 
@@ -31,25 +38,12 @@ http://localhost:8080/api/1.0/product
 
 TODO:
 
-
-
-
-RESEARCH change database stuff to underscore?
-  Google "sequelize model field naming convention"
-
-figure how to create inventory via "productId" and "storeId", rather than "product_id" and "store_id"
-  Check out http://docs.sequelizejs.com/en/v3/api/associations/
-
-OR
-
-convert all the model fields to underscore
-
 make on cascade delete
-
 
 Fix the following:
 
 Error with reset database
+Make sure all of the data, tables, and db are dropped first before running the load script
 
 Figure out what these errors are about:
   multiple primary keys for table "product" are not allowed
@@ -104,8 +98,9 @@ hqaiKGWmy7LrNC8Mvw4RC0mH
 
 Monday
   instore architecture and database cleanup
-  discuss mockup ui
-  discuss what we want
 Tuesday
   setup nba deployment
+  look for nba alternative
   start looking into reddit api, youtube api, and twitter api
+Wednesday
+  instore

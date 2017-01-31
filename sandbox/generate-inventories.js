@@ -54,7 +54,7 @@ Inventory.sync({ force: true }).then(() => {
             Inventory.create({
               product_id: productId,
               store_id: storeId,
-              stockCount: stockCount,
+              stock_count: stockCount,
               price: price,
             }).then((inventory) => {
               console.log('Inventory created!');
