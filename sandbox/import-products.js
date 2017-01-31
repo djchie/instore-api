@@ -7,7 +7,7 @@ require('babel-core/register')({
   plugins: ['transform-async-to-generator'],
 });
 
-require("babel-polyfill");
+require('babel-polyfill');
 
 const fs = require('fs');
 
@@ -16,7 +16,6 @@ const database = require('../server/database').default;
 const Product = database.models.Product;
 
 Product.sync({ force: true }).then(() => {
-
   fs.readFile('./product-data.json', 'utf-8', (error, data) => {
     if (error) {
       console.log('There\'s a fucking error');
@@ -41,7 +40,7 @@ Product.sync({ force: true }).then(() => {
           model: productData.model || 'N/A',
           upc: productData.gtins[0] || 'N/A',
         };
-     
+
         products.push(product);
       }
     }
