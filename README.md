@@ -1,7 +1,3 @@
-
-
-Figure out how server and client should interact... when the client side should be built... etc
-
 To manually generate shoe mock data
 1. `./scripts/shell/koa.sh`
 1. `cd sandbox`
@@ -16,9 +12,12 @@ To run locally:
 1. `docker-compose up`
 1. `./scripts/data/load_data.sh`
 
-Ue postgresql settings
-\x off;\pset format wrapped
-\x on
+To reset database (somehow you fucked up the data):
+1. `./scripts/data/reset_database.sh`
+
+Useful postgresql settings
+`\x off;\pset format wrapped`
+`\x on`
 
 
 ean
@@ -40,21 +39,12 @@ TODO:
 
 make on cascade delete
 
-Fix the following:
-
-Error with reset database
-Make sure all of the data, tables, and db are dropped first before running the load script
-
-Figure out what these errors are about:
-  multiple primary keys for table "product" are not allowed
-  multiple primary keys for table "store" are not allowed
-  multiple primary keys for table "inventory" are not allowed
-
-
-
 create endpoint for getting all products (make sure it's formatted correctly)
 
 create endpoint for getting stores
+
+pagination
+
 
 
 
