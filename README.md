@@ -32,7 +32,7 @@ images
 
 http://localhost:8080/api/1.0/
 http://localhost:8080/api/1.0/product
-
+localhost:8080/api/1.0/product?query=Nike&orderByField=name&orderAscending=1
 
 
 TODO:
@@ -40,7 +40,10 @@ TODO:
 make on cascade delete
 
 create endpoint for getting all products (make sure it's formatted correctly)
-
+  orderBy field,
+  handle situations when brand, type, size, etc is not given (returns empty results right now)
+    we can just have each default to all
+  pagination
 create endpoint for getting stores
 
 pagination
