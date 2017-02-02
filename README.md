@@ -40,7 +40,10 @@ TODO:
 make on cascade delete
 
 create endpoint for getting all products (make sure it's formatted correctly)
-  orderBy field,
+  should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+)
+    returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
+    http://docs.sequelizejs.com/en/v3/docs/querying/
+      look at Relations / Associations on how to do this
   handle situations when brand, type, size, etc is not given (returns empty results right now)
     we can just have each default to all
   pagination
