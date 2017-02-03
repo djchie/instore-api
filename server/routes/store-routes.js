@@ -8,11 +8,16 @@ const storeRouter = new Router();
 
 storeRouter.get('/store', async (ctx, next) => {
   const {
+    orderByField,
+    orderAscending,
     page,
     limit,
   } = ctx.query;
 
   const stores = await Store.findAll({
+    order: [
+      [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
+    ],
     offset: (page - 1) * limit,
     limit: limit,
   });

@@ -31,14 +31,15 @@ description
 images
 
 localhost:8080/api/1.0/product?query=Nike&orderByField=name&orderAscending=1&page=1&limit=10
-localhost:8080/api/1.0/store?page=1&limit=10
+localhost:8080/api/1.0/store?orderByField=name&orderAscending=1&page=1&limit=10
 
 TODO:
 
 make on cascade delete
 
 Create controllers/services that wraps around sequelize database calls (findAll() etc)
-
+  this allows for us to default params sent into findAll and etc
+  
 create endpoint for getting all products (make sure it's formatted correctly)
   should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params
     returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
