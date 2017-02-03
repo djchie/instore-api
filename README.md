@@ -37,9 +37,7 @@ TODO:
 
 make on cascade delete
 
-
-pagination (page, limit)
-
+Create controllers/services that wraps around sequelize database calls (findAll() etc)
 
 create endpoint for getting all products (make sure it's formatted correctly)
   should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params

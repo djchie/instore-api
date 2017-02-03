@@ -7,7 +7,6 @@ const Product = database.models.Product;
 const productRouter = new Router();
 
 productRouter.get('/product', async (ctx, next) => {
-  console.log(ctx.query);
   const {
     query,
     category,
@@ -17,6 +16,8 @@ productRouter.get('/product', async (ctx, next) => {
     color,
     orderByField,
     orderAscending,
+    page,
+    limit,
   } = ctx.query;
 
   const products = await Product.findAll({
@@ -37,8 +38,10 @@ productRouter.get('/product', async (ctx, next) => {
     order: [
       [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
     ],
+    offset: (page - 1) * limit,
+    limit: limit,
   });
-  // ctx.body = 'You\'re on a product detail page!';
+
   ctx.body = products;
 });
 

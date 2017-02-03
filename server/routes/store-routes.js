@@ -7,7 +7,6 @@ const Store = database.models.Store;
 const storeRouter = new Router();
 
 storeRouter.get('/store', async (ctx, next) => {
-  console.log(ctx.query);
   const {
     page,
     limit,
