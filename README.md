@@ -39,6 +39,10 @@ TODO:
 
 make on cascade delete
 
+
+pagination (page, limit)
+
+
 create endpoint for getting all products (make sure it's formatted correctly)
   should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params
     returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
@@ -46,12 +50,6 @@ create endpoint for getting all products (make sure it's formatted correctly)
       look at Relations / Associations on how to do this
   handle situations when brand, type, size, etc is not given (returns empty results right now)
     we can just have each default to all
-  pagination
-create endpoint for getting stores
-  all stores
-  store by id in path
-
-pagination (page, limit)
 
 prepare for client
   copy webpack build process from nba
