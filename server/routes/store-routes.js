@@ -14,15 +14,19 @@ storeRouter.get('/store', async (ctx, next) => {
     limit,
   } = ctx.query;
 
-  const stores = await Store.findAll({
-    order: [
-      [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
-    ],
-    offset: (page - 1) * limit,
-    limit: limit,
-  });
+  try {
+    const stores = await Store.findAll({
+      order: [
+        [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
+      ],
+      offset: (page - 1) * limit,
+      limit: limit,
+    });
 
-  ctx.body = stores;
+    ctx.body = stores;
+  } catch (error) {
+    ctx.throw(500, error.message);
+  }
 });
 
 storeRouter.get('/store/:id', async (ctx, next) => {
@@ -30,13 +34,17 @@ storeRouter.get('/store/:id', async (ctx, next) => {
     id,
   } = ctx.params;
 
-  const store = await Store.find({
-    where: {
-      id: id,
-    },
-  });
+  try {
+    const store = await Store.find({
+      where: {
+        id: id,
+      },
+    });
 
-  ctx.body = store;
+    ctx.body = store;
+  } catch (error) {
+    ctx.throw(500, error.message);
+  }
 });
 
 export default storeRouter;
