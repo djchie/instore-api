@@ -30,10 +30,8 @@ size
 description
 images
 
-http://localhost:8080/api/1.0/
-http://localhost:8080/api/1.0/product
-localhost:8080/api/1.0/product?query=Nike&orderByField=name&orderAscending=1
-
+localhost:8080/api/1.0/product?query=Nike&orderByField=name&orderAscending=1&page=1&limit=10
+localhost:8080/api/1.0/store?page=1&limit=10
 
 TODO:
 
