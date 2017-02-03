@@ -37,9 +37,9 @@ TODO:
 
 make on cascade delete
 
-Create controllers/services that wraps around sequelize database calls (findAll() etc)
+Create controllers that wraps around sequelize database calls (findAll() etc)
   this allows for us to default params sent into findAll and etc
-  
+
 create endpoint for getting all products (make sure it's formatted correctly)
   should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params
     returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
@@ -68,7 +68,8 @@ prepare for client
 
 // https://github.com/ngduc/react-setup/blob/master/src/server/renderAppRouter.js
 
-
+Example app with server side, webpack, koa 2, postgres
+https://github.com/embbnux/kails/tree/master/config
 
 
 You may have noticed that once you stop the container, if you previously wrote some data on the DB, that data is lost. This is because by default Docker containers are not persistent. We can resolve this problem using a data container.
