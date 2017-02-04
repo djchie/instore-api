@@ -13,7 +13,7 @@ storeController.fetchStores = async (
   limit=20
 ) => {
   return new Promise(async (resolve, reject) => {
-    
+
     if (Number(page) <= 0) {
       reject(new Error('Page index out of bounds'));
     }
@@ -60,6 +60,12 @@ storeController.fetchStore = async (id) => {
           id: id,
         },
       });
+
+      if (!store) {
+        const error = new Error('Store not found');
+        error.status = 404;
+        reject(error);
+      }
 
       resolve(store);
     } catch (error) {

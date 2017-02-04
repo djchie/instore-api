@@ -94,4 +94,26 @@ productController.fetchProducts = async (
   });
 };
 
+productController.fetchProduct = async (id) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const product = await Product.find({
+        where: {
+          id: id,
+        },
+      });
+
+      if (!product) {
+        const error = new Error('Product not found');
+        error.status = 404;
+        reject(error);
+      }
+
+      resolve(product);
+    } catch (error) {
+      reject(error);
+    }
+  });
+};
+
 export default productController;
