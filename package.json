@@ -4,9 +4,6 @@
   "description": "The backend code for instore",
   "main": "index.js",
   "scripts": {
-    "build:dev": "echo 'TBD: Will create development client build'",
-    "buid:stage": "echo 'TBD: Will create staging client build'",
-    "build:prod": "echo 'TBD: Will create production client build'",
     "server:dev": "nodemon -L index.js",
     "server:stage": "node index.js",
     "server:prod": "node index.js",
@@ -24,14 +21,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "www.github.com"
+    "url": "https://github.com/findinstore/instore-server"
   },
   "keywords": [
     "instore",
     "api",
     "backend"
   ],
-  "author": "Derrick Chie",
+  "author": [
+    "Derrick Chie <djchie.dev@gmail.com> (https://github.com/djchie)",
+  ],
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.13.2",
