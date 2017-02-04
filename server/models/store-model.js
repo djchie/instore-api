@@ -43,13 +43,6 @@ const storeModel = (sequelize, DataTypes) => {
             name: 'store_id',
             allowNull: false,
           },
-          
-          // foreignKey: {
-          //   allowNull: false,
-          // },
-
-          // foreignKey: 'store_id',
-          // foreignKeyConstraint: true,
         });
       },
     },

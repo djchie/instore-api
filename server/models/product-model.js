@@ -46,13 +46,6 @@ const productModel = (sequelize, DataTypes) => {
             name: 'product_id',
             allowNull: false,
           },
-          
-          // foreignKey: {
-          //   allowNull: false,
-          // },
-
-          // foreignKey: 'product_id',
-          // foreignKeyConstraint: true,
         });
       },
     },
