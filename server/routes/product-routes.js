@@ -2,7 +2,7 @@ import Router from 'koa-router';
 
 import database from '../database';
 
-const Product = database.models.Product;
+import productController from '../controllers/product-controller';
 
 const productRouter = new Router();
 
@@ -21,36 +21,25 @@ productRouter.get('/product', async (ctx, next) => {
   } = ctx.query;
 
   try {
-    const products = await Product.findAll({
-      where: {
-        $or: [
-          {
-            name: {
-              $like: `%${query}%`,
-            },
-          },
-          {
-            description: {
-              $like: `%${query}%`,
-            },
-          },
-        ],
-      },
-      order: [
-        [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
-      ],
-      offset: (page - 1) * limit,
-      limit: limit,
-    });
+    const response = await productController.fetchProducts(
+      query,
+      category,
+      type,
+      brand,
+      size,
+      color,
+      orderByField,
+      orderAscending,
+      page,
+      limit
+    );
 
-    ctx.body = products;
+    ctx.status = 200;
+    ctx.body = response;
   } catch (error) {
+    ctx.body = error.message;
     ctx.throw(500, error.message);
   }
 });
-
-productRouter.post('/product'), async (ctx, next) => {
-  
-}
 
 export default productRouter;
