@@ -12,41 +12,60 @@ storeController.fetchStores = async (
   page=1,
   limit=20
 ) => {
-  try {
-    const result = await Store.findAndCountAll({
-      order: [
-        [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
-      ],
-      offset: (page - 1) * limit,
-      limit: limit,
-    });
+  return new Promise(async (resolve, reject) => {
+    
+    if (Number(page) <= 0) {
+      reject(new Error('Page index out of bounds'));
+    }
+    
+    try {
 
-    return {
-      orderByField: orderByField,
-      orderAscending: orderAscending,
-      page: page,
-      limit: limit,
-      count: result.rows.length,
-      totalCount: result.count,
-      stores: result.rows,
-    };
-  } catch (error) {
-    return error;
-  }
-}
+      const result = await Store.findAndCountAll({
+        order: [
+          [orderByField, !!orderAscending ? 'ASC' : 'DESC'],
+        ],
+        offset: (page - 1) * limit,
+        limit: limit,
+      });
+
+      const totalPage = Math.ceil(result.count / limit);
+
+      if (page > totalPage) {
+        reject(new Error('Page index out of bounds'));
+      }
+
+      const response = {
+        orderByField: orderByField,
+        orderAscending: orderAscending,
+        limit: limit,
+        page: page,
+        totalPage: totalPage,
+        count: result.rows.length,
+        totalCount: result.count,
+        stores: result.rows,
+      };
+
+      resolve(response);
+    } catch (error) {
+      reject(error);
+    }
+  });
+};
 
 storeController.fetchStore = async (id) => {
-  try {
-    const store = await Store.find({
-      where: {
-        id: id,
-      },
-    });
+  return new Promise(async (resolve, reject) => {
+    try {
+      const store = await Store.find({
+        where: {
+          id: id,
+        },
+      });
 
-    return store;
-  } catch (error) {
-    return error;
-  }
-}
+      resolve(store);
+    } catch (error) {
+      reject(error);
+    }
+  });
+};
 
 export default storeController;

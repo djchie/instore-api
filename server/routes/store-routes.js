@@ -24,8 +24,10 @@ storeRouter.get('/store', async (ctx, next) => {
     ctx.status = 200;
     ctx.body = response;
   } catch (error) {
-    ctx.body = error.message;
-    ctx.throw(500, error.message);
+    ctx.status = error.status || 500;
+    ctx.body = {
+      message: error.message
+    };
   }
 });
 
@@ -40,8 +42,10 @@ storeRouter.get('/store/:id', async (ctx, next) => {
     ctx.status = 200;
     ctx.body = response;
   } catch (error) {
-    ctx.body = error.message;
-    ctx.throw(500, error.message);
+    ctx.status = error.status || 500;
+    ctx.body = {
+      message: error.message
+    };
   }
 });
 
