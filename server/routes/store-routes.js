@@ -1,8 +1,7 @@
 import Router from 'koa-router';
 
 import database from '../database';
-
-const Store = database.models.Store;
+import storeController from '../controllers/store-controller';
 
 const storeRouter = new Router();
 
@@ -15,16 +14,17 @@ storeRouter.get('/store', async (ctx, next) => {
   } = ctx.query;
 
   try {
-    const stores = await Store.findAll({
-      order: [
-        [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
-      ],
-      offset: (page - 1) * limit,
-      limit: limit,
-    });
+    const response = await storeController.fetchStores(
+      orderByField,
+      orderAscending,
+      page,
+      limit
+    );
 
-    ctx.body = stores;
+    ctx.status = 200;
+    ctx.body = response;
   } catch (error) {
+    ctx.body = error.message;
     ctx.throw(500, error.message);
   }
 });
@@ -35,14 +35,12 @@ storeRouter.get('/store/:id', async (ctx, next) => {
   } = ctx.params;
 
   try {
-    const store = await Store.find({
-      where: {
-        id: id,
-      },
-    });
+    const response = await storeController.fetchStore(id);
 
-    ctx.body = store;
+    ctx.status = 200;
+    ctx.body = response;
   } catch (error) {
+    ctx.body = error.message;
     ctx.throw(500, error.message);
   }
 });

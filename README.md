@@ -36,9 +36,10 @@ localhost:8080/api/1.0/store?orderByField=name&orderAscending=1&page=1&limit=10
 TODO:
 
 make on cascade delete
+  when deleting product, should delete all inventories
+  when deleting store, should delete all associated inventories
 
-Create controllers that wraps around sequelize database calls (findAll() etc)
-  this allows for us to default params sent into findAll and etc
+Return count of results
 
 create endpoint for getting all products (make sure it's formatted correctly)
   should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params

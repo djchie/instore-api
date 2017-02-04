@@ -1,7 +1,6 @@
 import Router from 'koa-router';
 
 import database from '../database';
-
 import productController from '../controllers/product-controller';
 
 const productRouter = new Router();
