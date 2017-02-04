@@ -55,14 +55,13 @@ productController.fetchProducts = async (
   }
 
   try {
-    const products = await Product.findAll({
+    const result = await Product.findAndCountAll({
       where: where,
       order: [
         [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
       ],
       offset: (page - 1) * limit,
       limit: limit,
-      // attributes: [[sequelize.fn('COUNT', sequelize.col('id')), 'count']]
     });
 
     return {
@@ -71,7 +70,9 @@ productController.fetchProducts = async (
       orderAscending: orderAscending,
       page: page,
       limit: limit,
-      products: products,
+      count: result.rows.length,
+      totalCount: result.count,
+      products: result.rows,
     };
   } catch (error) {
     return error;

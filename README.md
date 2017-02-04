@@ -39,7 +39,7 @@ make on cascade delete
   when deleting product, should delete all inventories
   when deleting store, should delete all associated inventories
 
-Return count of results
+Check for when queries are made to outside of pagination index boundaries
 
 create endpoint for getting all products (make sure it's formatted correctly)
   should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params

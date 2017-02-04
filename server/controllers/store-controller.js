@@ -13,7 +13,7 @@ storeController.fetchStores = async (
   limit=20
 ) => {
   try {
-    const stores = await Store.findAll({
+    const result = await Store.findAndCountAll({
       order: [
         [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
       ],
@@ -26,7 +26,9 @@ storeController.fetchStores = async (
       orderAscending: orderAscending,
       page: page,
       limit: limit,
-      products: stores,
+      count: result.rows.length,
+      totalCount: result.count,
+      stores: result.rows,
     };
   } catch (error) {
     return error;
