@@ -35,16 +35,6 @@ localhost:8080/api/1.0/store?orderByField=name&orderAscending=1&page=1&limit=10
 
 TODO:
 
-make on cascade delete
-  when deleting product, should delete all inventories
-  when deleting store, should delete all associated inventories
-
-create endpoint for getting all products (make sure it's formatted correctly)
-  should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params
-    returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
-    http://docs.sequelizejs.com/en/v3/docs/querying/
-      look at Relations / Associations on how to do this
-
 prepare for client
   copy webpack build process from nba
   take out all the unecessary stuff from nba until there's about 3 components
@@ -53,6 +43,13 @@ prepare for client
   gonna break client off into another submodule
 
 setup heroku for staging and production server
+
+create endpoint for getting all products (make sure it's formatted correctly)
+  should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params
+    returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
+    http://docs.sequelizejs.com/en/v3/docs/querying/
+      look at Relations / Associations on how to do this
+
 
 // Resources on server-side rendering
 
