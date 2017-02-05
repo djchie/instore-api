@@ -36,7 +36,6 @@ localhost:8080/api/1.0/store?orderByField=name&orderAscending=1&page=1&limit=10
 TODO:
 
 prepare for client
-  take out all the unecessary stuff from nba until there's about 3 components
   take out all the unecessary npm packages
   create an instore-client repo
   gonna break client off into another submodule

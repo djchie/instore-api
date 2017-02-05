@@ -29,14 +29,14 @@
     "backend"
   ],
   "author": [
-    "Derrick Chie <djchie.dev@gmail.com> (https://github.com/djchie)",
+    "Derrick Chie <djchie.dev@gmail.com> (https://github.com/djchie)"
   ],
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.13.2",
     "babel-polyfill": "^6.13.0",
     "bcryptjs": "^2.3.0",
-    "koa": "^2.0.0-alpha.5",
+    "koa": "^2.0.0-alpha.7",
     "koa-router": "^7.0.1",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
