@@ -37,10 +37,9 @@ TODO:
 
 prepare for client
   take out all the unecessary npm packages
-  create an instore-client repo
-  gonna break client off into another submodule
   make webpack build bundle into one directory above in folder "build"
   make server serve build
+  give client a config folder as well
   setup heroku for deployment
   gonna try and implement server side rendering to get that out of the way  
 
