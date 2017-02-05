@@ -1,0 +1,3 @@
+[submodule "instore-client"]
+	path = instore-client
+	url = https://github.com/findinstore/instore-client
