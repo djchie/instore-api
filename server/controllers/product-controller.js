@@ -7,7 +7,7 @@ const Product = database.models.Product;
 const productController = {};
 
 productController.fetchProducts = async (
-  query,
+  query='All',
   category='All',
   type='All',
   brand='All',
@@ -24,8 +24,10 @@ productController.fetchProducts = async (
       reject(new Error('Page index out of bounds'));
     }
 
-    const where = {
-      $or: [
+    const where = {};
+
+    if (query != 'All') {
+      where.$or = [
         {
           name: {
             $like: `%${query}%`,
@@ -36,8 +38,8 @@ productController.fetchProducts = async (
             $like: `%${query}%`,
           },
         },
-      ],
-    };
+      ];
+    }
 
     if (category != 'All') {
       where.category = category;

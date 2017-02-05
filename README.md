@@ -36,9 +36,7 @@ localhost:8080/api/1.0/store?orderByField=name&orderAscending=1&page=1&limit=10
 TODO:
 
 prepare for client
-  take out all the unecessary npm packages
-  give client a config folder as well
-  clean webpack code syntax
+  take out all the unecessary npm packages (use depcheck)
   setup heroku for deployment
   gonna try and implement server side rendering to get that out of the way  
 
@@ -46,6 +44,7 @@ setup heroku for staging and production server
 
 create endpoint for getting all products (make sure it's formatted correctly)
   should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params
+    google geoapi gives a box back
     returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
     http://docs.sequelizejs.com/en/v3/docs/querying/
       look at Relations / Associations on how to do this
