@@ -1,5 +1,6 @@
 import Koa from 'koa';
 import Router from 'koa-router';
+import serve from 'koa-static';
 import Sequelize from 'sequelize';
 import convert from 'koa-convert';
 
@@ -26,6 +27,9 @@ server.use(convert(logger()));
 
 // Adds a X-Response-Time in the response header
 server.use(convert(responseTime()));
+
+// Serves the build folder
+server.use(convert(serve('build/')));
 
 // response middleware
 router.get('/', async (ctx, next) => {
