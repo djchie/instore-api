@@ -9,7 +9,7 @@ const storeController = {};
 storeController.fetchStores = async (
   orderByField='name',
   orderAscending=1,
-  page=1,
+  page=0,
   limit=20
 ) => {
   return new Promise(async (resolve, reject) => {
@@ -24,11 +24,11 @@ storeController.fetchStores = async (
         order: [
           [orderByField, !!orderAscending ? 'ASC' : 'DESC'],
         ],
-        offset: (page - 1) * limit,
+        offset: page * limit,
         limit: limit,
       });
 
-      const totalPage = Math.ceil(result.count / limit);
+      const totalPage = Math.ceil(result.count / limit) - 1;
 
       if (page > totalPage) {
         reject(new Error('Page index out of bounds'));

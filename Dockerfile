@@ -28,4 +28,4 @@ COPY . /usr/src/app
 # between the running process inside the container and the outside world
 # (i.e. the host).
 EXPOSE 8080
-# CMD [ "npm", "run", "dev" ]
+# CMD [ "npm", "run", "server:dev" ]

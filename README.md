@@ -35,12 +35,18 @@ localhost:8080/api/1.0/store?orderByField=name&orderAscending=1&page=1&limit=10
 
 TODO:
 
+incoporate location into product endpoint
+  also, allow for product in stock option and all products option (meaning include products even if the stock count is 0)
 create endpoint for getting all products (make sure it's formatted correctly)
   should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params (product result page should only show in stock local)
     google geoapi gives a box back
     returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
     http://docs.sequelizejs.com/en/v3/docs/querying/
       look at Relations / Associations on how to do this
+
+create the instore-pipeline repo
+  setup toml
+  hook up to bestbuy
 
 prepare for client
   setup heroku for deployment
