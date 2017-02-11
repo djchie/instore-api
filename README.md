@@ -115,12 +115,5 @@ hqaiKGWmy7LrNC8Mvw4RC0mH
 
 
 
-
-Monday
-  instore architecture and database cleanup
-Tuesday
-  setup nba deployment
-  look for nba alternative
-  start looking into reddit api, youtube api, and twitter api
-Wednesday
-  instore
+Look at the following for a node deubgger
+https://nodejs.org/api/debugger.html

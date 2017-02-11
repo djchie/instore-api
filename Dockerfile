@@ -24,6 +24,8 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 
+ENV PATH="./node_modules/.bin:$PATH"
+
 # The EXPOSE command is used to associate a specified port to enable networking
 # between the running process inside the container and the outside world
 # (i.e. the host).
