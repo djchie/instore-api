@@ -5,19 +5,20 @@ import services from '../services';
 
 const Product = database.models.Product;
 const Inventory = database.models.Inventory;
+const Store = database.models.Store;
 
 const productController = {};
 
 productController.fetchProducts = async (
-  query='all',
+  query,
   location,
-  category='all',
-  type='all',
-  brand='all',
+  category,
+  type,
+  brand,
   minPrice=0,
-  maxPrice='max',
+  maxPrice,
   minStock=1,
-  maxStock='max',
+  maxStock,
   orderByField='name',
   orderAscending=1,
   page=0,
@@ -45,7 +46,7 @@ productController.fetchProducts = async (
 
     const productWhere = {};
 
-    if (query != 'all') {
+    if (query) {
       productWhere.$or = [
         {
           name: {
@@ -60,15 +61,15 @@ productController.fetchProducts = async (
       ];
     }
 
-    if (category != 'all') {
+    if (category) {
       productWhere.category = category;
     }
 
-    if (type != 'all') {
+    if (type) {
       productWhere.type = type;
     }
 
-    if (brand != 'all') {
+    if (brand) {
       productWhere.brand = brand;
     }
 
@@ -81,11 +82,11 @@ productController.fetchProducts = async (
       }
     };
 
-    if (maxPrice != 'max') {
+    if (maxPrice) {
       inventoryWhere.price.$lte = maxPrice;
     }
 
-    if (maxStock != 'max') {
+    if (maxStock) {
       inventoryWhere.stock_count.$lte = maxStock;
     }
 
@@ -99,7 +100,13 @@ productController.fetchProducts = async (
         include: [
           {
             model: Inventory,
-            where: inventoryWhere,       
+            where: inventoryWhere,
+            // include: [
+            //   {
+            //     model: Store,
+            //     required: true,
+            //   }
+            // ],
           },
         ],
         order: [
