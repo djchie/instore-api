@@ -1,6 +1,7 @@
 import sequelize from 'sequelize';
 
 import database from '../database';
+import services from '../services';
 
 const Product = database.models.Product;
 
@@ -8,6 +9,7 @@ const productController = {};
 
 productController.fetchProducts = async (
   query='All',
+  location,
   category='All',
   type='All',
   brand='All',
@@ -22,6 +24,20 @@ productController.fetchProducts = async (
 
     if (Number(page) <= 0) {
       reject(new Error('Page index out of bounds'));
+    }
+
+    // Gets coordinates based on address via Google Geocoding API
+
+    let formattedLocation;
+    try {
+      const geocodingResponse = await services.google.geocoding.getGeocoding(location);
+      formattedLocation = {
+        latitude: geocodingResponse.results[0].geometry.location.lat,
+        longitude: geocodingResponse.results[0].geometry.location.lng,
+        address: geocodingResponse.results[0].formatted_address,
+      };
+    } catch (error) {
+      reject(error);
     }
 
     const where = {};
@@ -79,6 +95,7 @@ productController.fetchProducts = async (
 
       const response = {
         query: query,
+        location: formattedLocation,
         orderByField: orderByField,
         orderAscending: orderAscending,
         limit: limit,

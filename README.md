@@ -12,7 +12,7 @@ To run locally:
 1. `docker-compose up`
 1. `./scripts/data/load_data.sh`
 
-To reset database (somehow you fucked up the data):
+To reset datatbase (somehow you fucked up the data):
 1. `./scripts/data/reset_database.sh`
 
 Useful postgresql settings
@@ -44,9 +44,14 @@ create endpoint for getting all products (make sure it's formatted correctly)
     http://docs.sequelizejs.com/en/v3/docs/querying/
       look at Relations / Associations on how to do this
 
+figure out why console logs aren't showing up in the docker-compose window
+
 create the instore-pipeline repo
   setup toml
   hook up to bestbuy
+
+Later, we should always pass in a default location, usually user's current location
+
 
 prepare for client
   setup heroku for deployment

@@ -8,6 +8,7 @@ const productRouter = new Router();
 productRouter.get('/product', async (ctx, next) => {
   const {
     query,
+    location,
     category,
     type,
     brand,
@@ -22,6 +23,7 @@ productRouter.get('/product', async (ctx, next) => {
   try {
     const response = await productController.fetchProducts(
       query,
+      location,
       category,
       type,
       brand,
