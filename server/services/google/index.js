@@ -1,7 +1,3 @@
-import geoencoding from './geoencoding';
-
-const google = {
-  geoencoding,
-};
+import google from './google';
 
 export default google;

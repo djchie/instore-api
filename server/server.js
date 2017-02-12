@@ -8,10 +8,12 @@ import logger from 'koa-logger';
 import responseTime from 'koa-response-time';
 
 import database from './database';
-
 import config from '../config';
-
 import router from './routes';
+
+import services from './services';
+
+console.log(services.google.fetchCoordinates('6436 Saipan Street, Cypress, CA 90630'));
 
 const port = process.env.PORT || config.server.port;
 
