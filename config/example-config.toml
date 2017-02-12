@@ -17,3 +17,7 @@ password = "password"
 user = "user"
 host = "postgresql"
 port = 5432
+
+[google]
+  [geocoding]
+  api_key = "API_KEY"
