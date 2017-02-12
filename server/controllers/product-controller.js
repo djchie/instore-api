@@ -4,17 +4,20 @@ import database from '../database';
 import services from '../services';
 
 const Product = database.models.Product;
+const Inventory = database.models.Inventory;
 
 const productController = {};
 
 productController.fetchProducts = async (
-  query='All',
+  query='all',
   location,
-  category='All',
-  type='All',
-  brand='All',
-  size='All',
-  color='All',
+  category='all',
+  type='all',
+  brand='all',
+  minPrice=0,
+  maxPrice='max',
+  minStock=1,
+  maxStock='max',
   orderByField='name',
   orderAscending=1,
   page=0,
@@ -40,10 +43,10 @@ productController.fetchProducts = async (
       reject(error);
     }
 
-    const where = {};
+    const productWhere = {};
 
-    if (query != 'All') {
-      where.$or = [
+    if (query != 'all') {
+      productWhere.$or = [
         {
           name: {
             $like: `%${query}%`,
@@ -57,29 +60,48 @@ productController.fetchProducts = async (
       ];
     }
 
-    if (category != 'All') {
-      where.category = category;
+    if (category != 'all') {
+      productWhere.category = category;
     }
 
-    if (type != 'All') {
-      where.type = type;
+    if (type != 'all') {
+      productWhere.type = type;
     }
 
-    if (brand != 'All') {
-      where.brand = brand;
+    if (brand != 'all') {
+      productWhere.brand = brand;
     }
 
-    if (size != 'All') {
-      where.size = size;
+    const inventoryWhere = {
+      price: {
+        $gte: minPrice,
+      },
+      stock_count: {
+        $gte: minStock,
+      }
+    };
+
+    if (maxPrice != 'max') {
+      inventoryWhere.price.$lte = maxPrice;
     }
 
-    if (color != 'All') {
-      where.color = color;
+    if (maxStock != 'max') {
+      inventoryWhere.stock_count.$lte = maxStock;
     }
+
+    // Handle coordinates here
+    // In the future, handle for store hours
+    const storeWhere = {};
 
     try {
       const result = await Product.findAndCountAll({
-        where: where,
+        where: productWhere,
+        include: [
+          {
+            model: Inventory,
+            where: inventoryWhere,       
+          },
+        ],
         order: [
           [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
         ],
@@ -108,6 +130,8 @@ productController.fetchProducts = async (
 
       resolve(response);
     } catch (error) {
+      console.log('ERROR!!!');
+      console.log(error);
       reject(error);
     }
   });
