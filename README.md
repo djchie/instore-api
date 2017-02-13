@@ -125,9 +125,35 @@ https://nodejs.org/api/debugger.html
 
 
 
+Figure out how to filter by coordinates and query and then inventory information
 
-fixed index out of bounds check, and changed association to belongToMany for correct many to many association
-
-quoteIdentifiers problem, and figure out how to filter by coordinates and query and then inventory information
+sort stores by lowest price?
 
 
+
+default map radius should be?
+
+map radius segments should be?
+
+
+Figure out default radius from yelp
+Check the origin SF coordinates and Sausalito coordinates as well, then figure out the difference between the default coordinates below
+then figure out different segments
+
+Yelp default lower
+37.84228108102275
+-122.33345031738281
+
+SF
+37.7749295
+-122.4194155
+
+Yelp default higher
+37.67942806321442
+-122.53944396972656
+
+SF
+-122.33345031738281,37.84228108102275,-122.53944396972656,37.67942806321442
+
+Sausalito
+-122.4697494506836,37.88161414413521,-122.52124786376953,37.84095620152376

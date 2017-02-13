@@ -28,7 +28,11 @@ storeController.fetchStores = async (
         limit: limit,
       });
 
-      const totalPage = Math.ceil(result.count / limit) - 1;
+      let totalPage = 0;
+
+      if (result.count > 0) {
+        totalPage = Math.ceil(result.count / limit) - 1;
+      }
 
       if (page > totalPage) {
         reject(new Error('Page index out of bounds'));
@@ -47,6 +51,8 @@ storeController.fetchStores = async (
 
       resolve(response);
     } catch (error) {
+      console.log('Error with Store.findAndCountAll');
+      console.log(error);
       reject(error);
     }
   });
@@ -69,6 +75,8 @@ storeController.fetchStore = async (id) => {
 
       resolve(store);
     } catch (error) {
+      console.log('Error with Store.find');
+      console.log(error);
       reject(error);
     }
   });

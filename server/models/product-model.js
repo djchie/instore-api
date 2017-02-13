@@ -41,7 +41,10 @@ const productModel = (sequelize, DataTypes) => {
     tableName: 'product',
     classMethods: {
       associate: (models) => {
-        Product.belongsToMany(models.Store, { through: models.Inventory });
+        Product.belongsToMany(models.Store, {
+          through: models.Inventory,
+          as: 'stores',
+        });
         // Product.hasMany(models.Inventory, {
         //   foreignKey: {
         //     name: 'product_id',
