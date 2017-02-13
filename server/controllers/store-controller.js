@@ -31,10 +31,10 @@ storeController.fetchStores = async (
       let totalPage = 0;
 
       if (result.count > 0) {
-        totalPage = Math.ceil(result.count / limit) - 1;
+        totalPage = Math.ceil(result.count / limit);
       }
 
-      if (page > totalPage) {
+      if (page >= totalPage) {
         reject(new Error('Page index out of bounds'));
       }
 

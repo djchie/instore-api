@@ -147,17 +147,22 @@ productController.fetchProducts = async (
     try {
       const result = await Product.findAndCountAll({
         where: productWhere,
+        // duplicating: false,
+        // subQuery: false,
+        distinct: true,
         include: [
           {
             model: Store,
+            where: storeWhere,
+            // distinct: true,
             through: {
               attributes: ['stock_count', 'price'],
               where: inventoryWhere,
               as: 'inventory',
             },
             attributes: ['id', 'name', 'location', 'image_url', 'phone_number', 'hour', 'coordinate'],
-            where: storeWhere,
             as: 'stores',
+            required: false,
           },
         ],
         order: [
@@ -170,12 +175,14 @@ productController.fetchProducts = async (
       let totalPage = 0;
 
       if (result.count > 0) {
-        totalPage = Math.ceil(result.count / limit) - 1;
+        totalPage = Math.ceil(result.count / limit);
       }
 
-      if (page > totalPage) {
+      if (page >= totalPage) {
         reject(new Error('Page index out of bounds'));
       }
+
+      // console.log(result.length);
 
       const response = {
         query: query,
@@ -188,6 +195,8 @@ productController.fetchProducts = async (
         count: result.rows.length,
         totalCount: result.count,
         products: result.rows,
+        // count: result.length,
+        // products: result,
       };
 
       resolve(response);
