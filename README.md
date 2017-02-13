@@ -126,3 +126,8 @@ https://nodejs.org/api/debugger.html
 
 
 
+fixed index out of bounds check, and changed association to belongToMany for correct many to many association
+
+quoteIdentifiers problem, and figure out how to filter by coordinates and query and then inventory information
+
+
