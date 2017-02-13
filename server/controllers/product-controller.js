@@ -130,9 +130,13 @@ productController.fetchProducts = async (
     const storeWhere = {
         coordinate: {
           latitude: {
-            $gte: 37.76,
-            $lte: 37.78,
+            $gt: formattedLocation.bounds.southwest.latitude,
+            $lt: formattedLocation.bounds.northeast.latitude,
           },
+          longitude: {
+            $gt: formattedLocation.bounds.southwest.longitude,
+            $lt: formattedLocation.bounds.northeast.longitude,
+          }
         },
               // id: '923d5831-b08a-4d86-aaac-0a82a277b6db',
       // location: {
