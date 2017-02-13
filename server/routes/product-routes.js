@@ -9,6 +9,8 @@ productRouter.get('/product', async (ctx, next) => {
   const {
     query,
     location,
+    northeastBound,
+    southwestBound,
     category,
     type,
     brand,
@@ -26,6 +28,8 @@ productRouter.get('/product', async (ctx, next) => {
     const response = await productController.fetchProducts(
       query,
       location,
+      northeastBound,
+      southwestBound,
       category,
       type,
       brand,

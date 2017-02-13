@@ -17,6 +17,10 @@
   **Optional:**
  
   `query=[string]`
+  `northeastBound=[number]` This comes from the Google Maps API getBounds() function
+    https://developers.google.com/maps/documentation/javascript/reference#Map
+  `southwestBound=[number]` This comes from the Google Maps API getBounds() function
+    https://developers.google.com/maps/documentation/javascript/reference#Map
   `category=[string]`
   `type=[string]`
   `brand=[string]`

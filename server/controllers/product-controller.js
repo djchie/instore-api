@@ -12,6 +12,8 @@ const productController = {};
 productController.fetchProducts = async (
   query,
   location,
+  northeastBound,
+  southwestBound,
   category,
   type,
   brand,
@@ -33,13 +35,46 @@ productController.fetchProducts = async (
     // Gets coordinates based on address via Google Geocoding API
 
     let formattedLocation;
+    let northeastCoordinates;
+    let southwestCoordinates;
+
     try {
       const geocodingResponse = await services.google.geocoding.getGeocoding(location);
       formattedLocation = {
+        address: geocodingResponse.results[0].formatted_address,
         latitude: geocodingResponse.results[0].geometry.location.lat,
         longitude: geocodingResponse.results[0].geometry.location.lng,
-        address: geocodingResponse.results[0].formatted_address,
       };
+
+      if (northeastBound && southwestBound) {
+        const northeastBoundCoordinates = northeastBound.split(',');
+        const southwestBoundCoordinates = southwestBound.split(',');
+
+        northeastCoordinates = {
+          latitude: northeastBoundCoordinates[0],
+          longitude: northeastBoundCoordinates[1],
+        };
+
+        southwestCoordinates = {
+          latitude: southwestBoundCoordinates[0],
+          longitude: southwestBoundCoordinates[1],
+        };
+      } else {
+        northeastCoordinates = {
+          latitude: geocodingResponse.results[0].geometry.bounds.northeast.lat,
+          longitude: geocodingResponse.results[0].geometry.bounds.northeast.lng,
+        };
+        southwestCoordinates = {
+          latitude: geocodingResponse.results[0].geometry.bounds.southwest.lat,
+          longitude: geocodingResponse.results[0].geometry.bounds.southwest.lng,
+        };
+      }
+
+      formattedLocation.bounds = {
+        northeast: northeastCoordinates,
+        southwest: southwestCoordinates,
+      };
+
     } catch (error) {
       reject(error);
     }
