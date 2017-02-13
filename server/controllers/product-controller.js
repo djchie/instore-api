@@ -26,7 +26,7 @@ productController.fetchProducts = async (
 ) => {
   return new Promise(async (resolve, reject) => {
 
-    if (Number(page) <= 0) {
+    if (Number(page) < 0) {
       reject(new Error('Page index out of bounds'));
     }
 
@@ -99,14 +99,16 @@ productController.fetchProducts = async (
         where: productWhere,
         include: [
           {
-            model: Inventory,
-            where: inventoryWhere,
+            // model: Inventory,
+            // where: inventoryWhere,
             // include: [
             //   {
             //     model: Store,
             //     required: true,
             //   }
             // ],
+            model: Store,
+            where: storeWhere,
           },
         ],
         order: [

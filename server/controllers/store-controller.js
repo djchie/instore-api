@@ -14,7 +14,7 @@ storeController.fetchStores = async (
 ) => {
   return new Promise(async (resolve, reject) => {
 
-    if (Number(page) <= 0) {
+    if (Number(page) < 0) {
       reject(new Error('Page index out of bounds'));
     }
     
