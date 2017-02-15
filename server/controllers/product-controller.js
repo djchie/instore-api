@@ -7,6 +7,8 @@ const Product = database.models.Product;
 const Inventory = database.models.Inventory;
 const Store = database.models.Store;
 
+console.log(sequelize.literal);
+
 const productController = {};
 
 productController.fetchProducts = async (
@@ -35,49 +37,49 @@ productController.fetchProducts = async (
     // Gets coordinates based on address via Google Geocoding API
 
     let formattedLocation;
-    let northeastCoordinates;
-    let southwestCoordinates;
+    // let northeastCoordinates;
+    // let southwestCoordinates;
 
-    try {
-      const geocodingResponse = await services.google.geocoding.getGeocoding(location);
-      formattedLocation = {
-        address: geocodingResponse.results[0].formatted_address,
-        latitude: geocodingResponse.results[0].geometry.location.lat,
-        longitude: geocodingResponse.results[0].geometry.location.lng,
-      };
+    // try {
+    //   const geocodingResponse = await services.google.geocoding.getGeocoding(location);
+    //   formattedLocation = {
+    //     address: geocodingResponse.results[0].formatted_address,
+    //     latitude: geocodingResponse.results[0].geometry.location.lat,
+    //     longitude: geocodingResponse.results[0].geometry.location.lng,
+    //   };
 
-      if (northeastBound && southwestBound) {
-        const northeastBoundCoordinates = northeastBound.split(',');
-        const southwestBoundCoordinates = southwestBound.split(',');
+    //   if (northeastBound && southwestBound) {
+    //     const northeastBoundCoordinates = northeastBound.split(',');
+    //     const southwestBoundCoordinates = southwestBound.split(',');
 
-        northeastCoordinates = {
-          latitude: northeastBoundCoordinates[0],
-          longitude: northeastBoundCoordinates[1],
-        };
+    //     northeastCoordinates = {
+    //       latitude: northeastBoundCoordinates[0],
+    //       longitude: northeastBoundCoordinates[1],
+    //     };
 
-        southwestCoordinates = {
-          latitude: southwestBoundCoordinates[0],
-          longitude: southwestBoundCoordinates[1],
-        };
-      } else {
-        northeastCoordinates = {
-          latitude: geocodingResponse.results[0].geometry.bounds.northeast.lat,
-          longitude: geocodingResponse.results[0].geometry.bounds.northeast.lng,
-        };
-        southwestCoordinates = {
-          latitude: geocodingResponse.results[0].geometry.bounds.southwest.lat,
-          longitude: geocodingResponse.results[0].geometry.bounds.southwest.lng,
-        };
-      }
+    //     southwestCoordinates = {
+    //       latitude: southwestBoundCoordinates[0],
+    //       longitude: southwestBoundCoordinates[1],
+    //     };
+    //   } else {
+    //     northeastCoordinates = {
+    //       latitude: geocodingResponse.results[0].geometry.bounds.northeast.lat,
+    //       longitude: geocodingResponse.results[0].geometry.bounds.northeast.lng,
+    //     };
+    //     southwestCoordinates = {
+    //       latitude: geocodingResponse.results[0].geometry.bounds.southwest.lat,
+    //       longitude: geocodingResponse.results[0].geometry.bounds.southwest.lng,
+    //     };
+    //   }
 
-      formattedLocation.bounds = {
-        northeast: northeastCoordinates,
-        southwest: southwestCoordinates,
-      };
+    //   formattedLocation.bounds = {
+    //     northeast: northeastCoordinates,
+    //     southwest: southwestCoordinates,
+    //   };
 
-    } catch (error) {
-      reject(error);
-    }
+    // } catch (error) {
+    //   reject(error);
+    // }
 
     const productWhere = {};
 
@@ -126,18 +128,18 @@ productController.fetchProducts = async (
     }
 
     // In the future, handle for store hours
-    const storeWhere = {
-        coordinate: {
-          latitude: {
-            $gt: formattedLocation.bounds.southwest.latitude,
-            $lt: formattedLocation.bounds.northeast.latitude,
-          },
-          longitude: {
-            $gt: formattedLocation.bounds.southwest.longitude,
-            $lt: formattedLocation.bounds.northeast.longitude,
-          }
-        },
-    };
+    // const storeWhere = {
+    //     coordinate: {
+    //       latitude: {
+    //         $gt: formattedLocation.bounds.southwest.latitude,
+    //         $lt: formattedLocation.bounds.northeast.latitude,
+    //       },
+    //       longitude: {
+    //         $gt: formattedLocation.bounds.southwest.longitude,
+    //         $lt: formattedLocation.bounds.northeast.longitude,
+    //       }
+    //     },
+    // };
 
     const offset = page * limit;
 
@@ -147,7 +149,7 @@ productController.fetchProducts = async (
         include: [
           {
             model: Store,
-            where: storeWhere,
+            // where: storeWhere,
             // distinct: true,
             through: {
               attributes: ['stock_count', 'price'],
@@ -155,7 +157,6 @@ productController.fetchProducts = async (
               as: 'inventory',
             },
             attributes: ['id', 'name', 'location', 'image_url', 'phone_number', 'hour', 'coordinate'],
-            order: ['price', 'ASC'],
             as: 'stores',
             // Converts this to a left join
             // This makes it so that products without an inventory and store are also returned
@@ -164,10 +165,27 @@ productController.fetchProducts = async (
           },
         ],
         order: [
-          [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
+          [
+            orderByField,
+            !!Number(orderAscending) ? 'ASC' : 'DESC'
+          ],
+          // Need to watch out for SQL injection
+          [
+            sequelize.literal('"stores.inventory.price"'),
+            'ASC'
+          ],
+          // [
+          //   {
+          //     model: Store,
+          //     as: 'stores',
+          //   },
+          //   'inventory.price',
+          //   'ASC',
+          // ],
         ],
         // offset: offset,
-        // This puts a limit on the subquery, so we can't use this for now
+        // This puts a limit on the subquery when using include, so we
+        // can't use this for now
         // https://github.com/sequelize/sequelize/issues/6073
         // limit: limit,
       });
