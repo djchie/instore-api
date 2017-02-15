@@ -125,7 +125,6 @@ productController.fetchProducts = async (
       inventoryWhere.stock_count.$lte = maxStock;
     }
 
-    // Handle coordinates here
     // In the future, handle for store hours
     const storeWhere = {
         coordinate: {
@@ -138,18 +137,13 @@ productController.fetchProducts = async (
             $lt: formattedLocation.bounds.northeast.longitude,
           }
         },
-              // id: '923d5831-b08a-4d86-aaac-0a82a277b6db',
-      // location: {
-
-      // }
     };
 
+    const offset = page * limit;
+
     try {
-      const result = await Product.findAndCountAll({
+      const result = await Product.findAll({
         where: productWhere,
-        // duplicating: false,
-        // subQuery: false,
-        distinct: true,
         include: [
           {
             model: Store,
@@ -161,28 +155,61 @@ productController.fetchProducts = async (
               as: 'inventory',
             },
             attributes: ['id', 'name', 'location', 'image_url', 'phone_number', 'hour', 'coordinate'],
+            order: ['price', 'ASC'],
             as: 'stores',
-            required: false,
+            // Converts this to a left join
+            // This makes it so that products without an inventory and store are also returned
+            // Without it, it becomes an inner join
+            // required: false,
           },
         ],
         order: [
           [orderByField, !!Number(orderAscending) ? 'ASC' : 'DESC'],
         ],
-        offset: page * limit,
-        limit: limit,
+        // offset: offset,
+        // This puts a limit on the subquery, so we can't use this for now
+        // https://github.com/sequelize/sequelize/issues/6073
+        // limit: limit,
       });
 
+      // let totalPage = 0;
+
+      // if (result.count > 0) {
+      //   totalPage = Math.ceil(result.count / limit);
+      // }
+
+      // if (page >= totalPage) {
+      //   reject(new Error('Page index out of bounds'));
+      // }
+
+      // const response = {
+      //   query: query,
+      //   location: formattedLocation,
+      //   orderByField: orderByField,
+      //   orderAscending: orderAscending,
+      //   limit: limit,
+      //   page: page,
+      //   totalPage: totalPage,
+      //   count: result.rows.length,
+      //   totalCount: result.count,
+      //   products: result.rows,
+      // };
+
+      const products = result;
+      const totalCount = products.length;
+
+      
       let totalPage = 0;
 
-      if (result.count > 0) {
-        totalPage = Math.ceil(result.count / limit);
+      if (totalCount > 0) {
+        totalPage = Math.ceil(totalCount / limit);
       }
 
       if (page >= totalPage) {
         reject(new Error('Page index out of bounds'));
       }
 
-      // console.log(result.length);
+      const paginatedProducts = products.slice(offset, offset + limit);
 
       const response = {
         query: query,
@@ -192,16 +219,14 @@ productController.fetchProducts = async (
         limit: limit,
         page: page,
         totalPage: totalPage,
-        count: result.rows.length,
-        totalCount: result.count,
-        products: result.rows,
-        // count: result.length,
-        // products: result,
+        count: paginatedProducts.length,
+        totalCount: totalCount,
+        products: paginatedProducts,
       };
 
       resolve(response);
     } catch (error) {
-      console.log('Error with Product.findAndCountAll');
+      console.log('Error with Product.findAll');
       console.log(error);
       reject(error);
     }

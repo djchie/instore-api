@@ -35,17 +35,6 @@ localhost:8080/api/1.0/store?orderByField=name&orderAscending=1&page=1&limit=10
 
 TODO:
 
-incoporate location into product endpoint
-  also, allow for product in stock option and all products option (meaning include products even if the stock count is 0)
-create endpoint for getting all products (make sure it's formatted correctly)
-  should have stockCount (All, 1+, 2+, 3+, 5+, 10+, 20+, 50+) and local coordinates query url params (product result page should only show in stock local)
-    google geoapi gives a box back
-    returns product array with coordinates of stores that carry it, and some meta data (such as store_id, phone, address, hours, etc for hover over tooltip)
-    http://docs.sequelizejs.com/en/v3/docs/querying/
-      look at Relations / Associations on how to do this
-
-figure out why console logs aren't showing up in the docker-compose window
-
 create the instore-pipeline repo
   setup toml
   hook up to bestbuy
@@ -125,35 +114,35 @@ https://nodejs.org/api/debugger.html
 
 
 
-Figure out how to filter by coordinates and query and then inventory information
+
+
+bug with limit, offset, and include
+Makes a possible fix to bug with limit, offset, and include via setting required to false in the include, but need to research this more
+
+required = false
+products will appear even if the stores is empty
+
+required = true
+there will be some pages where the count is less than 20 even if the limit is at 20
+
+https://github.com/sequelize/sequelize/issues/1719
+
+You can use $column$ to reference columns from a joined table on the outer query
+
+
+
+
+
+
+
+
+
+Paging is still off somehow
 
 sort stores by lowest price?
 
+for stores subquery, set a limit of 10 stores
 
 
-default map radius should be?
 
-map radius segments should be?
-
-
-Figure out default radius from yelp
-Check the origin SF coordinates and Sausalito coordinates as well, then figure out the difference between the default coordinates below
-then figure out different segments
-
-Yelp default lower
-37.84228108102275
--122.33345031738281
-
-SF
-37.7749295
--122.4194155
-
-Yelp default higher
-37.67942806321442
--122.53944396972656
-
-SF
--122.33345031738281,37.84228108102275,-122.53944396972656,37.67942806321442
-
-Sausalito
--122.4697494506836,37.88161414413521,-122.52124786376953,37.84095620152376
+get product by id should return stores, but somehow paginated? this is for hte second page
