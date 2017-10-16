@@ -3,6 +3,7 @@ import Router from 'koa-router';
 import serve from 'koa-static';
 import Sequelize from 'sequelize';
 import convert from 'koa-convert';
+import cors from 'koa-cors';
 
 import logger from 'koa-logger';
 import responseTime from 'koa-response-time';
@@ -28,6 +29,8 @@ server.use(convert(responseTime()));
 
 // Serves the build folder
 server.use(convert(serve('build/')));
+
+server.use(convert(cors()));
 
 // response middleware
 router.get('/', async (ctx, next) => {
